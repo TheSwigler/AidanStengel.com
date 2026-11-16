@@ -58,15 +58,6 @@
     .lede { max-width: 34ch; margin: 44px 0 0; font: 400 clamp(1.25rem, 2.4vw, 1.6rem)/1.4 var(--display); }
     .where { margin: 18px 0 0; color: var(--soft); font-size: 17px; }
 
-    /* Sheet tabs: the way into the other pages */
-    .tabs { display: flex; gap: 0; margin-top: 44px; flex-wrap: wrap; }
-    .tabs a {
-      display: inline-block; padding: 12px 22px; background: #fff; color: var(--ink);
-      border: 1px solid var(--grid); margin-right: -1px; text-decoration: none;
-      font: 600 17px/1.2 var(--body);
-    }
-    .tabs a:hover { background: var(--select); border-color: var(--ink); position: relative; }
-
     @media (max-width: 700px) {
       :root { --cell-w: 84px; --cell-h: 32px; }
       .grid-area { padding-left: 64px; padding-right: 20px; min-height: 520px; }
@@ -76,6 +67,15 @@
   </style>
 </head>
 <body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/resume/">Resume and portfolio</a>
+    </nav>
+  </div>
+</header>
 
 <header class="sheet">
   <div class="formula" aria-hidden="true">
@@ -91,56 +91,30 @@
       <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
     </div>
     <div class="selected"><h1>Aidan Stengel</h1></div>
-    <p class="lede">I take the spreadsheets and manual processes an organization runs on and turn them into apps people actually use.</p>
-    <p class="where">IT Specialist at the Virginia State Bar in Richmond, VA</p>
-    <nav class="tabs" aria-label="Site">
-      <a href="/resume/">Resume and portfolio</a>
-      <a href="/gifts/">Wish list</a>
-      <a href="https://www.linkedin.com/in/aidan-stengel-221ab1225/" target="_blank" rel="noopener">LinkedIn</a>
-    </nav>
+    <p class="lede">I build things. At work it's the apps and systems people rely on every day; at home it's usually something with an engine.</p>
+    <p class="where">Richmond, Virginia</p>
   </div>
 </header>
 
 <main>
   <section class="prose" aria-labelledby="about-h">
-    <h2 id="about-h">Who I am</h2>
-    <p>I started at the Virginia State Bar as a summer intern and have spent the last four years owning the business applications it runs on: membership, dues, discipline, and the internal tools staff use every day.</p>
-    <p>Most of my work starts the same way. Someone is keeping track of something by hand, and I build the thing that does it for them. The full story, with projects, is on my <a href="/resume/">resume and portfolio</a>.</p>
-  </section>
-
-  <section aria-labelledby="work-h">
-    <h2 id="work-h">What I do</h2>
-    <div class="rows-list">
-      <div class="row">
-        <h3>Business apps and automation</h3>
-        <p>Org-wide Power Apps and Power Automate solutions, including the service desk, event booking, and reimbursements.</p>
-      </div>
-      <div class="row">
-        <h3>Membership and finance systems</h3>
-        <p>I administer iMIS and rebuilt the organization's annual dues cycle from the ground up.</p>
-      </div>
-      <div class="row">
-        <h3>Systems integration</h3>
-        <p>I lead the work connecting iMIS and Litify, coordinating with outside consultants from requirements to launch.</p>
-      </div>
-      <div class="row">
-        <h3>Project management</h3>
-        <p>I run projects end to end and brought my department onto GitHub for tracking, versioning, and documentation.</p>
-      </div>
-    </div>
+    <h2 id="about-h">About me</h2>
+    <p>I'm Aidan. I work in IT, where I spend most of my time building software, automating processes, and connecting systems so people can stop doing things by hand. I like taking something messy and making it simple.</p>
+    <p>Outside of work I'm usually in the garage. I do my own car work, from wiring to suspension, and I'm always in the middle of some project.</p>
+    <p>If you're here for the professional side, my <a href="/resume/">resume and portfolio</a> has the details.</p>
   </section>
 </main>
 
 <footer>
   <span>© <span id="yr"></span> Aidan Stengel</span>
-  <span><a href="/resume/">Resume</a> &nbsp; <a href="/gifts/">Wish list</a> &nbsp; <a href="https://www.linkedin.com/in/aidan-stengel-221ab1225/" target="_blank" rel="noopener">LinkedIn</a></span>
+  <a href="/resume/">Resume and portfolio</a>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   (function () {
     var el = document.getElementById('typed');
-    var parts = [['=', ''], ['BUILD', 'fn'], ['(spreadsheets, "apps people use")', '']];
+    var parts = [['=', ''], ['BUILD', 'fn'], ['("apps", "engines")', '']];
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function render(n) {
       var html = '', left = n;
