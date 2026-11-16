@@ -104,3 +104,14 @@ footer a { color: var(--soft); }
   .posts li a { grid-template-columns: 1fr; gap: 4px; }
   .spec th { width: 40%; }
 }
+
+/* Photos */
+.hero-photo { max-width: 980px; margin: 40px auto 0; padding: 0 24px; }
+.hero-photo img { display: block; width: 100%; height: auto; max-height: 560px; object-fit: cover; border: 1px solid var(--grid); }
+figure { margin: 32px 0; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--grid); }
+figcaption { color: var(--soft); font-size: 15px; margin-top: 8px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.gallery figure { margin: 0; }
+.gallery img { aspect-ratio: 4 / 3; object-fit: cover; }
+.thumb { width: 100%; max-width: 240px; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--grid); display: block; margin-top: 12px; }
