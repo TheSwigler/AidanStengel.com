@@ -104,3 +104,34 @@ footer a { color: var(--soft); }
   .posts li a { grid-template-columns: 1fr; gap: 4px; }
   .spec th { width: 40%; }
 }
+
+/* Photos */
+.hero-photo { max-width: 980px; margin: 40px auto 0; padding: 0 24px; }
+.hero-photo img { display: block; width: 100%; height: auto; max-height: 560px; object-fit: cover; border: 1px solid var(--grid); }
+figure { margin: 32px 0; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--grid); }
+figcaption { color: var(--soft); font-size: 15px; margin-top: 8px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.gallery figure { margin: 0; }
+.gallery img { aspect-ratio: 4 / 3; object-fit: cover; }
+.thumb { width: 100%; max-width: 240px; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--grid); display: block; margin-top: 12px; }
+
+/* Dyno chart */
+.dyno { position: relative; margin: 32px 0; background: #fff; border: 1px solid var(--grid); padding: 18px 18px 14px; }
+.dyno svg { display: block; width: 100%; height: auto; font-family: var(--body); }
+.dyno .gl { stroke: var(--grid); stroke-width: 1; }
+.dyno .base { stroke: var(--soft); stroke-width: 1; }
+.dyno .ax { fill: var(--soft); font-size: 13px; }
+.dyno .pk { fill: var(--ink); font-size: 14px; font-weight: 600; }
+.dyno .lb { fill: var(--ink); font-size: 14px; }
+.dyno .xh { stroke: var(--soft); stroke-width: 1; stroke-dasharray: 3 3; }
+.dyno-legend { display: flex; gap: 20px; font-size: 15px; color: var(--ink); margin-bottom: 6px; }
+.dyno-legend i { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin-right: 8px; border-radius: 2px; }
+.dyno-tip { position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-size: 14px; line-height: 1.45; padding: 8px 12px; min-width: 150px; }
+.dyno figcaption { margin-top: 6px; }
+.dyno-table { margin-top: 10px; font-size: 15px; }
+.dyno-table summary { cursor: pointer; color: var(--cobalt); }
+.dyno-table .spec { margin-top: 10px; font-size: 15px; }
+.dyno-table .spec th { width: auto; }
+.dyno-scroll { overflow-x: auto; }
+@media (max-width: 700px) { .dyno-scroll svg { min-width: 620px; } .dyno { padding: 14px 12px 12px; } }
