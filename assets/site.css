@@ -72,3 +72,35 @@ footer a { color: var(--soft); }
   .row { grid-template-columns: 1fr; gap: 6px; }
   .topbar nav { gap: 16px; }
 }
+
+/* ---------- Garage / blog ---------- */
+.spec { width: 100%; border-collapse: collapse; border-top: 2px solid var(--ink); font-size: 16px; }
+.spec th, .spec td { text-align: left; vertical-align: top; padding: 12px 14px 12px 0; border-bottom: 1px solid var(--grid); }
+.spec th { width: 32%; font: 600 15px/1.4 var(--body); color: var(--soft); }
+.spec td { color: var(--ink); }
+
+.stages { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--ink); counter-reset: st; }
+.stages li { counter-increment: st; display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--grid); }
+.stages li::before { content: counter(st); font: 800 2rem/1 var(--display); color: var(--cobalt); }
+.stages li.now::before { background: var(--select); color: var(--ink); width: 44px; height: 44px; display: grid; place-items: center; }
+.stages h3 { margin: 0 0 4px; font: 600 1.15rem/1.3 var(--display); }
+.stages p { margin: 0; color: var(--soft); max-width: 62ch; }
+
+.posts { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--ink); }
+.posts li a { display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--grid); color: var(--ink); text-decoration: none; }
+.posts time { color: var(--soft); font-size: 15px; padding-top: 3px; }
+.posts h3 { margin: 0 0 4px; font: 600 1.25rem/1.25 var(--display); }
+.posts p { margin: 0; color: var(--soft); }
+.posts li a:hover h3 { text-decoration: underline; text-decoration-color: var(--cobalt); text-underline-offset: 4px; }
+
+.article { max-width: 68ch; }
+.article p, .article li { font-size: 19px; line-height: 1.7; }
+.article h2 { margin-top: 48px; }
+.article ul { padding-left: 22px; }
+.article .byline { color: var(--soft); font-size: 16px; margin: 0 0 32px; }
+.backlink { display: inline-block; margin-top: 48px; }
+
+@media (max-width: 700px) {
+  .posts li a { grid-template-columns: 1fr; gap: 4px; }
+  .spec th { width: 40%; }
+}

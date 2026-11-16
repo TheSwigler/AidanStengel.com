@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garage · Aidan Stengel</title>
+  <meta name="description" content="Build log for Aidan Stengel's 1981 C3 Corvette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/resume/">Resume</a>
+      <a href="/garage/" aria-current="page">Garage</a>
+      <a href="/gifts/">Wish list</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <h1>Garage</h1>
+  <p>Build log for my 1981 Corvette. I do all the work myself, one winter at a time.</p>
+</div>
+
+<main>
+  <section aria-labelledby="car-h">
+    <h2 id="car-h">The car</h2>
+    <div class="rows-list">
+      <div class="row">
+        <div><h3><a href="/garage/corvette/">1981 C3 Corvette</a></h3><div class="meta">BluePrint 396, TH350</div></div>
+        <p>A mostly gutted C3 turned into a street car. Engine is in and running; this winter is steering, suspension, and brakes so it can hit the road in spring 2027. <a href="/garage/corvette/">See the build sheet</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="posts-h">
+    <h2 id="posts-h">Posts</h2>
+    <ul class="posts">
+      <li><a href="/garage/posts/winter-2026-plan/">
+        <time datetime="2026-11-16">Nov 16, 2026</time>
+        <div><h3>The winter plan: steering, suspension, and brakes</h3><p>Everything under the car gets redone so it can be driven safely by spring.</p></div>
+      </a></li>
+      <li><a href="/garage/posts/meet-the-corvette/">
+        <time datetime="2026-11-16">Nov 16, 2026</time>
+        <div><h3>Meet the Corvette</h3><p>Where the car stands today and where it's going.</p></div>
+      </a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="yr"></span> Aidan Stengel</span>
+  <a href="/">Home</a>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

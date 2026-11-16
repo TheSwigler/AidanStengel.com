@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1981 Corvette build sheet · Aidan Stengel</title>
+  <meta name="description" content="Current setup and build plan for Aidan Stengel's 1981 C3 Corvette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/resume/">Resume</a>
+      <a href="/garage/" aria-current="page">Garage</a>
+      <a href="/gifts/">Wish list</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <h1>1981 C3 Corvette</h1>
+  <p>A forever car. The goal is a street monster with a toned-down IMSA look: no stickers, no numbers. First it has to be safe to drive.</p>
+</div>
+
+<main>
+  <section aria-labelledby="status-h">
+    <h2 id="status-h">Where it stands</h2>
+    <div class="prose">
+      <p>The new engine is in, the custom wiring harness is done, and the car has fired, but it hasn't been driven yet. This winter's job is steering, suspension, and brakes so it can go on the road in spring 2027.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="spec-h">
+    <h2 id="spec-h">Current setup</h2>
+    <table class="spec">
+      <tbody>
+        <tr><th scope="row">Engine</th><td>BluePrint 396 small-block stroker, carbureted, base dressed (BP3961CTC)</td></tr>
+        <tr><th scope="row">Induction</th><td>Holley 850 double pumper on a 1 in. phenolic 4-hole spacer</td></tr>
+        <tr><th scope="row">Fuel</th><td>BluePrint 130 gph electric pump</td></tr>
+        <tr><th scope="row">Exhaust</th><td>Hooker Super Competition headers with side pipes</td></tr>
+        <tr><th scope="row">Cooling</th><td>3-row Ledfoot aluminum radiator, dual SPAL fans</td></tr>
+        <tr><th scope="row">Accessory drive</th><td>CVF serpentine with 120A alternator</td></tr>
+        <tr><th scope="row">Transmission</th><td>Shop-rebuilt TH350, manual valve body, 2700 stall (temporary)</td></tr>
+        <tr><th scope="row">Rear end</th><td>Stock, 2.87 gear, TRW fiberglass rear spring</td></tr>
+        <tr><th scope="row">Power steering</th><td>Volvo 36050678 electric pump on a ServTronic controller</td></tr>
+        <tr><th scope="row">Brakes</th><td>Vacuum booster, refresh in progress</td></tr>
+        <tr><th scope="row">Wheels and tires</th><td>American Racing Torq Thrust, 15x8, 275/60R15 Cooper Cobras all around</td></tr>
+        <tr><th scope="row">Electrical</th><td>Custom wiring harness, battery behind the driver's seat, electric headlight motors</td></tr>
+        <tr><th scope="row">Deletes</th><td>A/C, radio, factory heater box</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="plan-h">
+    <h2 id="plan-h">The plan</h2>
+    <ol class="stages">
+      <li class="now"><div><h3>Back on the road, safely</h3><p>Borgeson steering box, poly bushings, body mounts, springs and shocks, front bearings, full brake refresh, rebuilt trailing arms and 5/16 in. half shafts. In progress this winter.</p></div></li>
+      <li><div><h3>Body, paint, and interior</h3><p>Bodywork and fresh paint in the current color, alignment, a new single harness, new lights, and a full interior: roll bar, bucket seats, custom dash with analog gauges, carpet, sound deadening, door cards.</p></div></li>
+      <li><div><h3>Manual swap and driveline</h3><p>M22 four-speed, new driveshaft and half shafts, a built Dana 44 with 3.73 gears.</p></div></li>
+      <li><div><h3>Suspension, brakes, wheels, and widebody</h3><p>Further suspension and brake upgrades, 18 in. wheels with 335 rear and 275 front, and a widebody with 4 in. rear and 2 in. front flares.</p></div></li>
+      <li><div><h3>Engine</h3><p>New cam, single-plane intake, built carb, and eventually E85.</p></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="posts-h">
+    <h2 id="posts-h">Build log</h2>
+    <ul class="posts">
+      <li><a href="/garage/posts/winter-2026-plan/">
+        <time datetime="2026-11-16">Nov 16, 2026</time>
+        <div><h3>The winter plan: steering, suspension, and brakes</h3><p>Everything under the car gets redone so it can be driven safely by spring.</p></div>
+      </a></li>
+      <li><a href="/garage/posts/meet-the-corvette/">
+        <time datetime="2026-11-16">Nov 16, 2026</time>
+        <div><h3>Meet the Corvette</h3><p>Where the car stands today and where it's going.</p></div>
+      </a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="yr"></span> Aidan Stengel</span>
+  <a href="/garage/">Garage</a>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
