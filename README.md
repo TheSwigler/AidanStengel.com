@@ -12,19 +12,23 @@ Shared styles are in `assets/site.css`.
 
 ## Editing the wish list
 
-Edit `gifts/items.json`. Each item:
+Everything is in `gifts/items.json`, grouped into `categories`. A category has either `items` or `groups` (subcategories with their own `items`), plus an optional `note`. Each item:
 
 ```json
 {
-  "name": "Thing I want",
-  "link": "https://example.com/product",
-  "price": "$40",
-  "note": "Size large, blue if they have it",
-  "top": true
+  "brand": "ICON",
+  "name": "Professional Socket Adapter Set, 4-Piece",
+  "store": "Harbor Freight · Richmond · Aisle 4",
+  "price": "$16.99",
+  "link": "https://go.harborfreight.com/www57324",
+  "image": "img/abc123.jpg",
+  "qty": 2,
+  "top": 3,
+  "have": true
 }
 ```
 
-Only `name` is required. `"top": true` marks it "Really want this" and moves it to the top. Separate items with commas inside the `[ ]`.
+Only `name` and `link` are required. `top` is the item's rank in Top picks (1 shows first). `"have": true` crosses it out as "Already have it". Product photos go in `gifts/img/`; leave `image` out and it shows the brand's initials instead.
 
 ## Resume PDF
 

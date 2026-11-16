@@ -10,21 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <style>
-    .list { border-top: 2px solid var(--ink); margin: 0; padding: 0; list-style: none; }
-    .item {
-      display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; align-items: baseline;
-      padding: 22px 0; border-bottom: 1px solid var(--grid);
+    .list { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+    .item a {
+      display: grid; grid-template-columns: 72px 1fr auto; gap: 18px; align-items: center;
+      padding: 16px 0; border-bottom: 1px solid var(--grid); color: var(--ink); text-decoration: none;
     }
-    .item h3 { font: 600 1.2rem/1.3 var(--display); margin: 0; }
-    .item h3 a { color: var(--ink); text-decoration-color: var(--grid); text-underline-offset: 4px; }
-    .item h3 a:hover { text-decoration-color: var(--cobalt); }
-    .item .price { font-size: 17px; color: var(--soft); white-space: nowrap; }
-    .item .note { grid-column: 1 / -1; margin: 0; color: var(--soft); max-width: 60ch; }
-    .item.top h3::after {
-      content: "Really want this"; margin-left: 12px; padding: 2px 8px; vertical-align: 3px;
-      background: var(--select); font: 600 13px/1.4 var(--body); color: var(--ink);
+    .item a:hover .name { text-decoration: underline; text-decoration-color: var(--cobalt); text-underline-offset: 3px; }
+    .pic { width: 72px; height: 72px; object-fit: contain; background: #fff; border: 1px solid var(--grid); }
+    .pic.ph { display: grid; place-items: center; font: 700 18px/1 var(--display); color: var(--soft); }
+    .brand { display: block; font-size: 13px; color: var(--soft); font-weight: 600; letter-spacing: .02em; }
+    .name { display: block; font: 600 1.05rem/1.3 var(--display); }
+    .store { display: block; font-size: 14px; color: var(--soft); margin-top: 2px; }
+    .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font: 600 12px/1.6 var(--body); }
+    .tag.top { background: var(--select); }
+    .tag.have { background: var(--grid); color: var(--soft); }
+    .price { text-align: right; font-weight: 600; white-space: nowrap; }
+    .qty { display: block; font-size: 13px; color: var(--soft); font-weight: 500; }
+    .item.have a { opacity: .55; }
+    .item.have .name { text-decoration: line-through; }
+
+    .cats { margin-top: 56px; }
+    details.cat { border-top: 2px solid var(--ink); }
+    details.cat:last-of-type { border-bottom: 2px solid var(--ink); }
+    details.cat > summary, details.sub > summary {
+      list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline;
+      padding: 18px 0;
     }
-    .empty { border-top: 2px solid var(--ink); padding: 28px 0; color: var(--soft); }
+    details summary::-webkit-details-marker { display: none; }
+    details.cat > summary .t { font: 600 1.5rem/1.2 var(--display); letter-spacing: -0.01em; }
+    details.sub > summary .t { font: 600 1.1rem/1.2 var(--display); }
+    summary .c { color: var(--soft); font-size: 15px; }
+    summary .t::before { content: "+"; display: inline-block; width: 1.1em; color: var(--cobalt); }
+    details[open] > summary .t::before { content: "−"; }
+    details.sub { border-top: 1px solid var(--grid); margin-left: 1.1em; }
+    details.sub .list { border-top: 0; }
+    details.cat > .list { margin-bottom: 18px; }
+    .note { color: var(--soft); margin: -6px 0 16px; font-size: 16px; }
+    .foot { color: var(--soft); font-size: 15px; margin-top: 28px; }
+    @media (max-width: 600px) {
+      .item a { grid-template-columns: 56px 1fr; }
+      .pic { width: 56px; height: 56px; }
+      .price { grid-column: 2; text-align: left; }
+      .qty { display: inline; margin-left: 6px; }
+    }
   </style>
 </head>
 <body>
@@ -41,12 +69,12 @@
 
 <div class="page-head">
   <h1>Wish list</h1>
-  <p>Things I'd love to get. Items marked "Really want this" are at the top of the list.</p>
+  <p id="intro">Tap any item to open it at the store. Top picks are the ones I want most. Anything marked "Already have it" is covered.</p>
 </div>
 
 <main>
   <section>
-    <div id="list-root"><p class="empty">Nothing on the list yet. Check back soon.</p></div>
+    <div id="root"><p class="foot">Loading the list…</p></div>
   </section>
 </main>
 
@@ -56,37 +84,83 @@
 </footer>
 
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  fetch('items.json', { cache: 'no-store' })
-    .then(function (r) { return r.json(); })
-    .then(function (items) {
-      if (!Array.isArray(items) || !items.length) return;
-      items.sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0); });
-      var ul = document.createElement('ul');
-      ul.className = 'list';
-      items.forEach(function (it) {
-        var li = document.createElement('li');
-        li.className = 'item' + (it.top ? ' top' : '');
-        var h = document.createElement('h3');
-        if (it.link) {
-          var a = document.createElement('a');
-          a.href = it.link; a.target = '_blank'; a.rel = 'noopener';
-          a.textContent = it.name; h.appendChild(a);
-        } else { h.textContent = it.name; }
-        li.appendChild(h);
-        var p = document.createElement('span');
-        p.className = 'price'; p.textContent = it.price || '';
-        li.appendChild(p);
-        if (it.note) {
-          var n = document.createElement('p');
-          n.className = 'note'; n.textContent = it.note; li.appendChild(n);
-        }
-        ul.appendChild(li);
-      });
-      var root = document.getElementById('list-root');
-      root.innerHTML = ''; root.appendChild(ul);
-    })
-    .catch(function () {});
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function el(tag, cls, text) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+function initials(s) {
+  return (s || '?').split(/\s+/).map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+}
+function itemEl(it) {
+  var li = el('li', 'item' + (it.have ? ' have' : ''));
+  var a = el('a'); a.href = it.link; a.target = '_blank'; a.rel = 'noopener';
+  if (it.image) {
+    var img = el('img', 'pic'); img.src = it.image; img.alt = ''; img.loading = 'lazy'; img.width = 72; img.height = 72;
+    a.appendChild(img);
+  } else {
+    var ph = el('span', 'pic ph', initials(it.brand)); ph.setAttribute('aria-hidden', 'true'); a.appendChild(ph);
+  }
+  var main = el('span');
+  if (it.brand) main.appendChild(el('span', 'brand', it.brand));
+  main.appendChild(el('span', 'name', it.name));
+  if (it.store) main.appendChild(el('span', 'store', it.store));
+  if (it.have) main.appendChild(el('span', 'tag have', 'Already have it'));
+  else if (it.top) main.appendChild(el('span', 'tag top', 'Top pick'));
+  a.appendChild(main);
+  var p = el('span', 'price', it.price || '');
+  if (it.qty > 1) p.appendChild(el('span', 'qty', '×' + it.qty));
+  a.appendChild(p);
+  li.appendChild(a);
+  return li;
+}
+function listEl(items) {
+  var ul = el('ul', 'list');
+  items.forEach(function (it) { ul.appendChild(itemEl(it)); });
+  return ul;
+}
+function allItems(c) {
+  return c.groups ? c.groups.reduce(function (a, g) { return a.concat(allItems(g)); }, []) : (c.items || []);
+}
+function catEl(c, cls) {
+  var d = el('details', cls);
+  var s = el('summary');
+  s.appendChild(el('span', 't', c.name));
+  s.appendChild(el('span', 'c', allItems(c).length + ' items'));
+  d.appendChild(s);
+  if (c.note) d.appendChild(el('p', 'note', c.note));
+  if (c.groups) c.groups.forEach(function (g) { d.appendChild(catEl(g, 'sub')); });
+  else d.appendChild(listEl(c.items));
+  return d;
+}
+
+fetch('items.json', { cache: 'no-store' })
+  .then(function (r) { return r.json(); })
+  .then(function (data) {
+    var root = document.getElementById('root');
+    root.innerHTML = '';
+    var cats = data.categories || [];
+    if (data.occasion) document.querySelector('.page-head h1').textContent = 'Wish list, ' + data.occasion;
+
+    var tops = [];
+    cats.forEach(function (c) { allItems(c).forEach(function (it) { if (it.top && !it.have) tops.push(it); }); });
+    tops.sort(function (a, b) { return (+a.top || 99) - (+b.top || 99); });
+    if (tops.length) {
+      root.appendChild(el('h2', null, 'Top picks'));
+      root.appendChild(listEl(tops));
+    }
+    var wrap = el('div', 'cats');
+    wrap.appendChild(el('h2', null, 'Everything else'));
+    cats.forEach(function (c) { wrap.appendChild(catEl(c, 'cat')); });
+    root.appendChild(wrap);
+    if (data.footnote) root.appendChild(el('p', 'foot', data.footnote));
+  })
+  .catch(function () {
+    document.getElementById('root').innerHTML = '<p class="foot">The list could not be loaded. Try refreshing the page.</p>';
+  });
 </script>
 </body>
 </html>

@@ -1,1 +1,1100 @@
-[]
+{
+  "title": "Aidan's Gift List",
+  "occasion": "Christmas 2026",
+  "footnote": "Prices were checked in late October 2026 and may have changed.",
+  "categories": [
+    {
+      "name": "Tools",
+      "groups": [
+        {
+          "name": "Milwaukee Cordless",
+          "items": [
+            {
+              "brand": "Milwaukee",
+              "name": "3697-22 M18 FUEL 1/2 in. Hammer Drill + 1/4 in. Impact Driver Combo Kit (2 XC5.0 batteries, charger)",
+              "store": "Dillon Supply",
+              "price": "$399.95",
+              "link": "https://www.dillonsupply.com/Product/20203697"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2834-20 M18 FUEL 7-1/4 in. Circular Saw, tool only",
+              "store": "RC Engine Service",
+              "price": "$279.00",
+              "link": "https://rcengineservice.com/products/2834-20-milwaukee-m18-fuel-7-1-4-circular-saw-tool-only"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2821-20 M18 FUEL SAWZALL Reciprocating Saw, tool only",
+              "store": "Tiger Supplies",
+              "price": "$169.00",
+              "link": "https://tigersupplies.com/products/milwaukee-2821-20-m18-fuel%E2%84%A2-sawzall%C2%AE-recip-saw-tool-only"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2888-20 M18 FUEL 4-1/2 in./5 in. Variable Speed Braking Grinder, tool only",
+              "store": "Tiger Supplies",
+              "price": "$143.00",
+              "link": "https://tigersupplies.com/products/milwaukee-2888-20-m18-fuel%E2%84%A2-4-1-2-5-variable-speed-braking-grinder-paddle-switch-no-lock-tool-only"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2967-20 M18 FUEL 1/2 in. High Torque Impact Wrench, Friction Ring, tool only",
+              "store": "Walmart",
+              "price": "$265.00",
+              "link": "https://www.walmart.com/ip/Milwaukee-Tool-M18-FUEL-1-2-High-Torque-Impact-Wrench-w-Friction-Ring/5298873222"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2557-20 M12 FUEL 3/8 in. Ratchet, tool only",
+              "store": "Ace Tool",
+              "price": "$199.00",
+              "link": "https://www.acetool.com/collections/cordless/products/milwaukee-2557-20-m12-fuel-3-8-ratchet-bare-tool"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2522-20 M12 FUEL 3 in. Compact Cut Off Tool, tool only",
+              "store": "Burns Tools",
+              "price": "$149.00",
+              "link": "https://www.burnstools.com/2522-20-m12-3-cutoff-circular-saw-bare"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "3485-20 M12 FUEL 1/4 in. Right Angle Die Grinder, tool only",
+              "store": "Ace Hardware",
+              "price": "$229.00",
+              "link": "https://www.acehardware.com/departments/tools/power-tools/die-grinders/2043890"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2520-20 M12 FUEL HACKZALL Reciprocating Saw, tool only",
+              "store": "Walmart (3rd-party seller)",
+              "price": "$179.00",
+              "link": "https://www.walmart.com/ip/Milwaukee-2520-20-M12-FUEL-HACKZALL-Reciprocating-Saw-Tool-Only/153246558"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2836-20 M18 FUEL Oscillating Multi-Tool, tool only",
+              "store": "Ace Hardware",
+              "price": "$249.00",
+              "link": "https://www.acehardware.com/departments/tools/power-tools/oscillating-tools/2009028"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2585-20 M12 FUEL 6 in. Random Orbital Sander, 3/16 in. orbit, tool only",
+              "store": "ToolUp",
+              "price": "$329.00",
+              "link": "https://toolup.com/products/milwaukee-2585-20-m12-fuel-6-random-orbital-sander-3-16"
+            },
+            {
+              "brand": "Milwaukee",
+              "name": "2584-20 M12 FUEL 6 in. Random Orbital Sander, 3/32 in. orbit, tool only",
+              "store": "Summit Racing",
+              "price": "$303.09",
+              "link": "https://www.summitracing.com/parts/mwt-258420"
+            }
+          ]
+        },
+        {
+          "name": "Lifting & Support",
+          "items": [
+            {
+              "brand": "DAYTONA",
+              "name": "3 Ton Heavy Duty Ratcheting Jack Stands, Slate Gray",
+              "store": "Harbor Freight · Richmond · Aisle 7",
+              "price": "$54.99",
+              "link": "https://www.harborfreight.com/3-ton-heavy-duty-ratcheting-jack-stands-slate-gray-70593.html",
+              "image": "img/61c55352ad.jpg"
+            },
+            {
+              "brand": "DAYTONA",
+              "name": "3 Ton Long-Reach Low-Profile Professional Floor Jack with Rapid Pump, Black",
+              "store": "Harbor Freight · Richmond · Aisle 7",
+              "price": "$269.99",
+              "link": "https://www.harborfreight.com/3-ton-long-reach-low-profile-professional-floor-jack-with-rapid-pump-black-64781.html",
+              "image": "img/8f3922a2ce.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Sockets & Ratchets",
+          "items": [
+            {
+              "brand": "ICON",
+              "name": "3/8 in. and 1/2 in. Professional Impact Universal Joint Adapter Set, 2-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$24.99",
+              "link": "https://www.harborfreight.com/38-in-and-12-in-professional-impact-universal-joint-adapter-set-2-piece-56697.html",
+              "top": 3,
+              "image": "img/ca28adc1ef.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Impact Socket Adapter Set, 4-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$32.99",
+              "link": "https://go.harborfreight.com/www57717",
+              "top": 4,
+              "image": "img/4079fc09db.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Socket Adapter Set, 4-Piece",
+              "store": "Harbor Freight · In-store only · Richmond · Aisle 4",
+              "price": "$16.99",
+              "link": "https://go.harborfreight.com/www57324",
+              "top": 5,
+              "image": "img/b57cd9f319.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "3/8 in. Drive Professional Impact Socket Extension Set, 4-Piece",
+              "store": "Harbor Freight · Limited stock · Richmond · Aisle 4",
+              "price": "$69.98",
+              "link": "https://go.harborfreight.com/www56918",
+              "qty": 2,
+              "top": 7,
+              "image": "img/1a01b38f58.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "G2 1/2 in. Drive 26 in. Long Locking Flex Ratchet",
+              "store": "Harbor Freight · In-store only · Richmond · Aisle 3",
+              "price": "$119.99",
+              "link": "https://www.harborfreight.com/g2-12-in-drive-26-in-long-locking-flex-ratchet-with-comfort-grip-70437.html",
+              "top": 8,
+              "image": "img/1e9b203d4a.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Wobble Socket Extension Set, 7-Piece",
+              "store": "Harbor Freight · Limited stock · Richmond · Aisle 3",
+              "price": "$39.99",
+              "link": "https://go.harborfreight.com/www56732",
+              "image": "img/971f9a7997.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Universal Joint Socket Adapter Set, 3-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$39.99",
+              "link": "https://go.harborfreight.com/www57773",
+              "image": "img/4ff77783ec.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "3/8 in. Drive Professional Triple-Square Impact Bit Socket Set, 9-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$39.99",
+              "link": "https://go.harborfreight.com/www59803",
+              "image": "img/7a60837c0a.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "3/8 in. Drive Professional TORX Bit Socket Set, 7-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$24.99",
+              "link": "https://go.harborfreight.com/www70433",
+              "image": "img/cc9c85248d.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "3/8 in. Drive SAE Professional Deep Impact Socket Set, 12-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$54.99",
+              "link": "https://go.harborfreight.com/www59739",
+              "image": "img/6c8bab7133.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "3/8 in. Drive Metric Professional Impact Socket Set, 13-Piece",
+              "store": "Harbor Freight · North Richmond · Aisle 8",
+              "price": "$39.99",
+              "link": "https://go.harborfreight.com/www70432",
+              "image": "img/f4c0c682de.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "1/2 in. Drive Metric Professional Shallow Socket Set, 13-Piece",
+              "store": "Harbor Freight · Limited stock · Richmond · Aisle 4",
+              "price": "$52.99",
+              "link": "https://go.harborfreight.com/www58097",
+              "image": "img/c949784b68.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "1/2 in. Drive Metric Professional Deep Socket Set, 13-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$59.99",
+              "link": "https://go.harborfreight.com/www58098",
+              "image": "img/addc2d34eb.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "1/2 in. Drive SAE Professional Shallow Socket Set, 13-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$52.99",
+              "link": "https://go.harborfreight.com/www58096",
+              "image": "img/aaaa443b46.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "1/2 in. Drive SAE Professional Deep Socket Set, 13-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$59.99",
+              "link": "https://go.harborfreight.com/www57955",
+              "image": "img/997fea4285.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "1/4 in. & 3/8 in. Drive Professional TORX Bit Socket Set, 12-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$29.99",
+              "link": "https://go.harborfreight.com/www59753",
+              "image": "img/d05b57e7cb.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Pliers & Cutters",
+          "items": [
+            {
+              "brand": "ICON",
+              "name": "7 in. Diagonal Cutter",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$17.99",
+              "link": "https://go.harborfreight.com/www59168",
+              "top": 9,
+              "image": "img/4800048606.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "8 in. Fast-Adjust Push-Button Slip-Joint Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$24.99",
+              "link": "https://www.harborfreight.com/8-in-fast-adjust-push-button-slip-joint-pliers-70310.html",
+              "image": "img/6b08fc5544.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "11 in. 45° Long-Reach Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$22.99",
+              "link": "https://www.harborfreight.com/11-in-45-long-reach-pliers-57790.html",
+              "image": "img/f4a05edc67.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "11 in. High-Leverage Diagonal Cutter",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$32.99",
+              "link": "https://go.harborfreight.com/www59737",
+              "image": "img/859041c27a.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "10 in. Long-Reach Pistol-Grip Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$21.99",
+              "link": "https://go.harborfreight.com/www59805",
+              "image": "img/200ed586c3.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "11 in. Long-Reach Pistol-Grip Needle Nose Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$21.99",
+              "link": "https://www.harborfreight.com/11-in-long-reach-pistol-grip-needle-nose-pliers-59804.html",
+              "image": "img/0353b0bf88.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "8 in. Hose Grip Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$19.99",
+              "link": "https://www.harborfreight.com/8-in-hose-grip-pliers-57795.html",
+              "image": "img/fac435bff0.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Precision Snap Ring Pliers, 8-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$74.99",
+              "link": "https://go.harborfreight.com/www64597",
+              "image": "img/d1e4266da8.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "9 in. Long-Nose Slip-Joint Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$29.99",
+              "link": "https://go.harborfreight.com/www70612",
+              "image": "img/6f8a7421a5.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "6 in. Flush Cut Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$37.99",
+              "link": "https://go.harborfreight.com/www57683",
+              "image": "img/745f00ea22.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "11 in. Long-Reach Needle Nose Pliers",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$22.99",
+              "link": "https://go.harborfreight.com/www57801",
+              "image": "img/8233a53607.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Screwdrivers & Nut Drivers",
+          "items": [
+            {
+              "brand": "ICON",
+              "name": "Professional Hollow Shaft Metric Nut Drivers, 7-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$34.99",
+              "link": "https://go.harborfreight.com/www56525",
+              "image": "img/8c5de20f6c.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Hollow Shaft SAE Nut Drivers, 7-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$34.99",
+              "link": "https://go.harborfreight.com/www56523",
+              "image": "img/34879e326e.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Mini TORX Screwdriver Set, 4-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$14.99",
+              "link": "https://go.harborfreight.com/www59469",
+              "have": true,
+              "image": "img/1f8dbd1e41.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Pullers & Specialty",
+          "items": [
+            {
+              "brand": "MADDOX",
+              "name": "Rear Axle Bearing Puller Set, 3-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$24.99",
+              "link": "https://go.harborfreight.com/www59821",
+              "image": "img/bb567c60e2.jpg"
+            },
+            {
+              "brand": "PITTSBURGH",
+              "name": "Slide Hammer and Puller Set, 14-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$34.99",
+              "link": "https://go.harborfreight.com/www56894",
+              "image": "img/7e2de67584.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Scraper and Removal Tools, 4-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$29.99",
+              "link": "https://go.harborfreight.com/www57048",
+              "image": "img/d951f1bce1.jpg"
+            },
+            {
+              "brand": "ICON",
+              "name": "Professional Radiator Hose Pick Set, 6-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$57.99",
+              "link": "https://go.harborfreight.com/www57573",
+              "image": "img/c369f4fe11.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Striking & Prying",
+          "items": [
+            {
+              "brand": "PITTSBURGH",
+              "name": "Punch and Chisel Set, 12-Piece",
+              "store": "Harbor Freight · Richmond · Back wall, left",
+              "price": "$16.99",
+              "link": "https://go.harborfreight.com/www66337",
+              "top": 1,
+              "image": "img/249995a082.jpg"
+            },
+            {
+              "brand": "PITTSBURGH",
+              "name": "4-Piece Pry Bar Set, 8/12/18/24 in.",
+              "store": "Harbor Freight · Richmond · Back wall, left",
+              "price": "$16.99",
+              "link": "https://www.harborfreight.com/pry-bar-set-4-piece-58388.html",
+              "top": 6,
+              "image": "img/5eb0c5e5bf.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Diagnostics & Air",
+          "items": [
+            {
+              "brand": "Klein Tools",
+              "name": "MM400 Auto-Ranging Digital Multimeter, 600V",
+              "store": "Walmart",
+              "price": "$75.43",
+              "link": "https://www.walmart.com/ip/Klein-Tools-MM400-600V-Auto-Ranging-Digital-Multimeter/50749322",
+              "top": 2
+            },
+            {
+              "brand": "MERLIN",
+              "name": "Dual-Head Air Chuck Inflator with Dial Gauge",
+              "store": "Harbor Freight · Richmond · Aisle 5",
+              "price": "$11.99",
+              "link": "https://www.harborfreight.com/Dual-Head-Air-Chuck-Inflator-with-Dial-Gauge-63544.html",
+              "image": "img/f07e1d0132.jpg"
+            },
+            {
+              "brand": "PITTSBURGH",
+              "name": "In-Line Spark Checker",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$5.49",
+              "link": "https://go.harborfreight.com/www63590",
+              "image": "img/04f0f8b20f.jpg"
+            },
+            {
+              "brand": "MADDOX",
+              "name": "12/24V Remote Starter Switch",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$19.99",
+              "link": "https://go.harborfreight.com/www70597",
+              "image": "img/e41a00e66f.jpg"
+            },
+            {
+              "brand": "MADDOX",
+              "name": "Deluxe Compression Test Kit, 10-Piece",
+              "store": "Harbor Freight · Richmond · Aisle 6",
+              "price": "$54.99",
+              "link": "https://www.harborfreight.com/deluxe-compression-test-kit-10-piece-64917.html",
+              "image": "img/bb6f6aca2e.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Shop Supplies",
+          "items": [
+            {
+              "brand": "Denco",
+              "name": "1930 Brake & Parts Cleaner, Non-Chlorinated, 12-Pack",
+              "store": "Amazon",
+              "price": "$45.99",
+              "link": "https://www.amazon.com/dp/B08CZYZN2G",
+              "image": "img/4c28a0994c.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "items": [
+            {
+              "brand": "U.S. GENERAL",
+              "name": "Screwdriver Rack",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$7.99",
+              "link": "https://www.harborfreight.com/screwdriver-rack-56655.html",
+              "image": "img/2149b1f2e9.jpg"
+            },
+            {
+              "brand": "U.S. GENERAL",
+              "name": "Magnetic Bit Storage",
+              "store": "Harbor Freight · Richmond · Aisle 4",
+              "price": "$9.99",
+              "link": "https://www.harborfreight.com/power-tools/drill-driver-bits/drill-bit-accessories/magnetic-bit-storage-70026.html",
+              "image": "img/dc180ede43.jpg"
+            },
+            {
+              "brand": "U.S. GENERAL",
+              "name": "30 in. 5-Drawer Mechanics Cart, Slate Gray",
+              "store": "Harbor Freight · North Richmond · Aisle 7",
+              "price": "$289.99",
+              "link": "https://www.harborfreight.com/30-in-5-drawer-mechanics-cart-slate-gray-70375.html",
+              "image": "img/f0a2fccf12.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coffee & Espresso",
+      "items": [
+        {
+          "brand": "Normcore",
+          "name": "Espresso Knock Box, 1L, Black",
+          "store": "Amazon",
+          "price": "$56.99",
+          "link": "https://www.amazon.com/dp/B0F7SHTJXQ",
+          "top": 10,
+          "image": "img/a61e467dbb.jpg"
+        },
+        {
+          "brand": "watchget",
+          "name": "Magnetic Puck Screen Holder Rack, Silver",
+          "store": "Amazon",
+          "price": "$25.99",
+          "link": "https://www.amazon.com/dp/B0FQNS7RH4",
+          "top": 11,
+          "image": "img/a8c624f44a.jpg"
+        },
+        {
+          "brand": "Normcore",
+          "name": "Espresso Tamping Station with Mat, 51/54mm, Black",
+          "store": "Amazon",
+          "price": "$59.99",
+          "link": "https://www.amazon.com/dp/B0DP14RPSF",
+          "image": "img/78cf43203a.jpg"
+        },
+        {
+          "brand": "Normcore",
+          "name": "Espresso Tamping Station (mat), Black",
+          "store": "Amazon",
+          "price": "$23.99",
+          "link": "https://www.amazon.com/dp/B0B8DBRF6D",
+          "image": "img/9dfabb6961.jpg"
+        },
+        {
+          "brand": "Fellow",
+          "name": "Atmos Vacuum Coffee Canister, 0.7L, Matte Black",
+          "store": "Amazon",
+          "price": "$34.95",
+          "link": "https://www.amazon.com/dp/B07PY4WXXV",
+          "image": "img/a09991479e.jpg"
+        },
+        {
+          "brand": "Turin",
+          "name": "DF64 Gen 2.7 Single Dose Grinder, Black, Red Titanium burrs",
+          "store": "Espresso Outlet",
+          "price": "$449.00",
+          "link": "https://espressooutlet.com/products/turin-df64-gen-2-single-dose-coffee-grinder",
+          "image": "img/811087bf34.jpg"
+        },
+        {
+          "brand": "Turin",
+          "name": "MC3 Espresso Machine, Black",
+          "store": "Espresso Outlet",
+          "price": "$899.00",
+          "link": "https://espressooutlet.com/products/turin-mc3-espresso-machine",
+          "image": "img/ff501087f3.jpg"
+        },
+        {
+          "brand": "Tekson",
+          "name": "10ml Refillable Perfume Atomizers, 4-Pack, Black",
+          "store": "Amazon",
+          "price": "$13.99",
+          "link": "https://www.amazon.com/dp/B09MSZ37WN",
+          "image": "img/5677db4420.jpg"
+        },
+        {
+          "brand": "YETI",
+          "name": "Rambler 64 oz. French Press",
+          "store": "YETI",
+          "price": "$130.00",
+          "link": "https://www.yeti.com/21071503455.html"
+        },
+        {
+          "brand": "CafeSing",
+          "name": "ORCA Manual Flat Burr Coffee Grinder",
+          "store": "Amazon",
+          "price": "$158.00",
+          "link": "https://www.amazon.com/dp/B0D3XHK8MV"
+        }
+      ]
+    },
+    {
+      "name": "Desk & Tech",
+      "items": [
+        {
+          "brand": "Keychron",
+          "name": "V6 8K Full-Size Wired Mechanical Keyboard",
+          "store": "Amazon",
+          "price": "$84.99",
+          "link": "https://www.amazon.com/dp/B0G3FTFL3P",
+          "image": "img/f43b392653.jpg"
+        },
+        {
+          "brand": "ProtoArc",
+          "name": "EM11 Pro Ergonomic Mouse for Large Hands, Black",
+          "store": "Amazon",
+          "price": "$49.99",
+          "link": "https://www.amazon.com/dp/B0HF8PHQSC",
+          "image": "img/8698eab99f.jpg"
+        },
+        {
+          "brand": "",
+          "name": "2-in-1 MagSafe-Compatible Charger Stand with 20W USB-C Block",
+          "store": "Amazon",
+          "price": "$22.99",
+          "link": "https://www.amazon.com/dp/B0C5QGPVRZ",
+          "image": "img/f1ac1510de.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "items": [
+        {
+          "brand": "Drift",
+          "name": "Vanilla Woods Reed Diffuser",
+          "store": "Amazon",
+          "price": "$44.00",
+          "link": "https://www.amazon.com/dp/B0DJ3GJP6B",
+          "top": 12,
+          "image": "img/a53ffff4d0.jpg"
+        },
+        {
+          "brand": "WIWIWISAM",
+          "name": "Wet Cat Food Can Organizer Rack (24 cans)",
+          "store": "Amazon",
+          "price": "$59.98",
+          "link": "https://www.amazon.com/dp/B0CLL29TSN",
+          "qty": 2,
+          "image": "img/c7db2bc299.jpg"
+        },
+        {
+          "brand": "YETI",
+          "name": "Rambler 12 oz. Colster Slim Can Insulator, Green",
+          "store": "Amazon",
+          "price": "$25.00",
+          "link": "https://www.amazon.com/dp/B098YS1CF7",
+          "image": "img/57383fd372.jpg"
+        },
+        {
+          "brand": "EP",
+          "name": "6 ft Heavy Duty Appliance Extension Cord, 14 AWG, Gray",
+          "store": "Amazon",
+          "price": "$9.99",
+          "link": "https://www.amazon.com/dp/B0BVZB6NWQ",
+          "have": true,
+          "image": "img/b4bac8e4df.jpg"
+        }
+      ]
+    },
+    {
+      "name": "'95 GMC K1500 door parts",
+      "items": [
+        {
+          "brand": "DORMAN",
+          "name": "77096 Outside Door Handle, Front Left, Textured Black",
+          "store": "RockAuto",
+          "price": "$26.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=77096",
+          "image": "img/6ceaad7815.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "77097 Outside Door Handle, Front Right, Textured Black",
+          "store": "RockAuto",
+          "price": "$20.99",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=77097",
+          "image": "img/23dfc7f1ca.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "88538 Inside Door Handle, Gray w/ Chrome Lever, Front Right",
+          "store": "RockAuto",
+          "price": "$19.46",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=88538",
+          "image": "img/c41816a64e.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "88539 Inside Door Handle, Gray w/ Chrome Lever, Front Left",
+          "store": "RockAuto",
+          "price": "$19.97",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=88539",
+          "image": "img/cbc40ae266.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "955188 Outside Mirror, Right, Manual J-Arm, Black/Chrome",
+          "store": "RockAuto",
+          "price": "$45.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=955188",
+          "image": "img/bde141ac2c.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "955187 Outside Mirror, Left, Manual J-Arm, Black/Chrome",
+          "store": "RockAuto",
+          "price": "$46.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=955187",
+          "image": "img/adb9ecad6f.jpg"
+        },
+        {
+          "brand": "SKP",
+          "name": "SK38428 Door Lock Striker",
+          "store": "RockAuto",
+          "price": "$9.12",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=SK38428",
+          "qty": 2,
+          "image": "img/e21314653d.jpg"
+        },
+        {
+          "brand": "FAIRCHILD",
+          "name": "G3009 Door Seal Weatherstrip Kit, 159 in.",
+          "store": "RockAuto",
+          "price": "$35.00",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=G3009",
+          "qty": 2,
+          "image": "img/158f6e8738.jpg"
+        },
+        {
+          "brand": "PRECISION",
+          "name": "DWP111091 Lower Door Weatherstrip, Left & Right",
+          "store": "RockAuto",
+          "price": "$34.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=DWP111091",
+          "image": "img/52a00168ca.jpg"
+        },
+        {
+          "brand": "PRECISION",
+          "name": "DWP111192 Upper Door Weatherstrip, Left & Right",
+          "store": "RockAuto",
+          "price": "$27.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=DWP111192",
+          "image": "img/9d825a53fd.jpg"
+        },
+        {
+          "brand": "STANDARD MOTOR PRODUCTS",
+          "name": "DL179 Door Lock Cylinder Set with Keys, Chrome",
+          "store": "RockAuto",
+          "price": "$38.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=DL179",
+          "image": "img/357786c71b.jpg"
+        },
+        {
+          "brand": "SKP",
+          "name": "SK940103 Door Latch, Front Right",
+          "store": "RockAuto",
+          "price": "$36.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=SK940103",
+          "image": "img/24a12bc837.jpg"
+        },
+        {
+          "brand": "SKP",
+          "name": "SK940102 Door Latch, Front Left",
+          "store": "RockAuto",
+          "price": "$36.99",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=SK940102",
+          "image": "img/f92b066272.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "703239 Door Lock Rod Clip Assortment",
+          "store": "RockAuto",
+          "price": "$4.34",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=703239",
+          "qty": 2,
+          "image": "img/249f385bf1.jpg"
+        },
+        {
+          "brand": "PRECISION",
+          "name": "WFK111088 Belt Weatherstrip / Window Scraper Kit, 4-Piece",
+          "store": "RockAuto",
+          "price": "$57.99",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=WFK111088",
+          "image": "img/951ea9467d.jpg"
+        },
+        {
+          "brand": "WAI GLOBAL",
+          "name": "361239 Inside Door Handle Trim, Front Left, Gray",
+          "store": "RockAuto",
+          "price": "$9.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=361239",
+          "image": "img/eb35b6f748.jpg"
+        },
+        {
+          "brand": "WAI GLOBAL",
+          "name": "361240 Inside Door Handle Trim, Front Right, Gray",
+          "store": "RockAuto",
+          "price": "$11.20",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=361240",
+          "image": "img/ac78a1990f.jpg"
+        },
+        {
+          "brand": "DORMAN",
+          "name": "702004 Door Panel Retainer Clips, Front",
+          "store": "RockAuto",
+          "price": "$15.08",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=702004",
+          "qty": 2,
+          "image": "img/41e3d7608f.jpg"
+        }
+      ],
+      "note": "Car project parts. Specific part numbers, so use the links as-is."
+    },
+    {
+      "name": "'81 Corvette parts",
+      "items": [
+        {
+          "brand": "Borgeson",
+          "name": "Power steering conversion kit, 999032 (Zip SC-849)",
+          "store": "Zip Corvette",
+          "price": "$838.30",
+          "link": "https://www.zip-corvette.com/67-82-borgeson-power-steering-gear-box-conversion.html"
+        },
+        {
+          "brand": "Ridetech",
+          "name": "Borgeson steering box to frame reinforcement (Zip SC-907)",
+          "store": "Zip Corvette",
+          "price": "$81.60",
+          "link": "https://www.zip-corvette.com/63-82-borgeson-steering-box-frame-reinforcement.html"
+        },
+        {
+          "brand": "Energy Suspension",
+          "name": "Hyper-Flex master bushing kit, black, 3.18123G",
+          "store": "RockAuto",
+          "price": "$265.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=3.18123G"
+        },
+        {
+          "brand": "Addco",
+          "name": "1-1/4 in. front anti-sway bar kit (Zip SU-652)",
+          "store": "Zip Corvette",
+          "price": "$286.90",
+          "link": "https://www.zip-corvette.com/63-82-addco-1-1-4in-front-anti-sway-bar-kit.html"
+        },
+        {
+          "brand": "Zip",
+          "name": "Offset upper control arm shaft kit, ZSU-506",
+          "store": "Zip Corvette",
+          "price": "$167.30",
+          "link": "https://www.zip-corvette.com/63-82-upper-control-arm-shaft-kit-offset-design.html",
+          "qty": 2
+        },
+        {
+          "brand": "Moog",
+          "name": "Upper ball joint, K6034",
+          "store": "RockAuto",
+          "price": "$49.58",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=K6034",
+          "qty": 2
+        },
+        {
+          "brand": "Moog",
+          "name": "Lower ball joint, K6035",
+          "store": "RockAuto",
+          "price": "$47.58",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=K6035",
+          "qty": 2
+        },
+        {
+          "brand": "Moog",
+          "name": "Tie rod end, left-hand thread, ES323L",
+          "store": "RockAuto",
+          "price": "$30.18",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=ES323L",
+          "qty": 2
+        },
+        {
+          "brand": "Moog",
+          "name": "Tie rod end, right-hand thread, ES323R",
+          "store": "RockAuto",
+          "price": "$30.14",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=ES323R",
+          "qty": 2
+        },
+        {
+          "brand": "Mevotech",
+          "name": "Tie rod adjusting sleeve, MS50739",
+          "store": "RockAuto",
+          "price": "$35.30",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=MS50739",
+          "qty": 2
+        },
+        {
+          "brand": "Mevotech",
+          "name": "Idler arm, greaseable, MS50924",
+          "store": "RockAuto",
+          "price": "$37.99",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=MS50924"
+        },
+        {
+          "brand": "Metro",
+          "name": "Upper control arm bumper, XB101",
+          "store": "RockAuto",
+          "price": "$22.86",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=XB101",
+          "qty": 2
+        },
+        {
+          "brand": "Metro",
+          "name": "Lower control arm bumper, XB100",
+          "store": "RockAuto",
+          "price": "$29.86",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=XB100",
+          "qty": 2
+        },
+        {
+          "brand": "Moog",
+          "name": "Front coil springs, HD, w/o A/C (pair), 5758",
+          "store": "RockAuto",
+          "price": "$88.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=5758"
+        },
+        {
+          "brand": "Bilstein",
+          "name": "Front shock, B6, 24009461",
+          "store": "RockAuto",
+          "price": "$205.58",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=24009461",
+          "qty": 2
+        },
+        {
+          "brand": "Timken",
+          "name": "Front outer wheel bearing + race, SET3",
+          "store": "RockAuto",
+          "price": "$19.58",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=SET3",
+          "qty": 2
+        },
+        {
+          "brand": "Timken",
+          "name": "Front inner wheel bearing + race, SET5",
+          "store": "RockAuto",
+          "price": "$20.66",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=SET5",
+          "qty": 2
+        },
+        {
+          "brand": "Timken",
+          "name": "Front inner grease seal, 9406S",
+          "store": "RockAuto",
+          "price": "$19.10",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=9406S",
+          "qty": 2
+        },
+        {
+          "brand": "Mid America",
+          "name": "Rebuilt trailing arm, manual version, LH, 684005",
+          "store": "Mid America Motorworks",
+          "price": "$599.99",
+          "link": "https://www.mamotorworks.com/corvette/product/corvette-trailing-arm-1980-1982-manual-rear-lh-assembly-rebuilt-684005"
+        },
+        {
+          "brand": "Mid America",
+          "name": "Rebuilt trailing arm, manual version, RH, 684007",
+          "store": "Mid America Motorworks",
+          "price": "$599.99",
+          "link": "https://mamotorworks.com/corvette/product/corvette-trailing-arm-1980-1982-manual-rear-rh-assembly-rebuilt-684007"
+        },
+        {
+          "brand": "Mid America",
+          "name": "3 in. half shaft, 5/16 in. flange bolts, 606906",
+          "store": "Mid America Motorworks",
+          "price": "$439.98",
+          "link": "https://mamotorworks.com/corvette/product/corvette-1980-1982-c3-3-half-shaft-with-u-joints-for-5-16-flange-bolts-606906",
+          "qty": 2
+        },
+        {
+          "brand": "Eckler's",
+          "name": "Trailing arm pivot bolt set, 25-114507-1",
+          "store": "Eckler's",
+          "price": "$20.99",
+          "link": "https://ecklers.com/1963-1982-corvette-trailing-arm-pivot-bolt-kit-25-114507-1.html"
+        },
+        {
+          "brand": "Mid America",
+          "name": "Body mount kit, rubber, 601-073",
+          "store": "Mid America Motorworks",
+          "price": "$124.99",
+          "link": "https://www.mamotorworks.com/corvette/product/corvette-1973-1982-body-mount-kit-coupe-convertible-601073"
+        },
+        {
+          "brand": "Bilstein",
+          "name": "Rear shock, B6, 24184649",
+          "store": "RockAuto",
+          "price": "$203.58",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=24184649",
+          "qty": 2
+        },
+        {
+          "brand": "Dynamic Friction",
+          "name": "GEO-Kit 5000 rotors + pads, front and rear, 451447184",
+          "store": "RockAuto",
+          "price": "$244.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=451447184"
+        },
+        {
+          "brand": "Raybestos",
+          "name": "Caliper, front right, stainless sleeve, FRC8001",
+          "store": "RockAuto",
+          "price": "$61.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=FRC8001"
+        },
+        {
+          "brand": "Raybestos",
+          "name": "Caliper, front left, stainless sleeve, FRC8002",
+          "store": "RockAuto",
+          "price": "$61.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=FRC8002"
+        },
+        {
+          "brand": "Raybestos",
+          "name": "Caliper, rear right, stainless sleeve, FRC8003",
+          "store": "RockAuto",
+          "price": "$61.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=FRC8003"
+        },
+        {
+          "brand": "Raybestos",
+          "name": "Caliper, rear left, stainless sleeve, FRC8004",
+          "store": "RockAuto",
+          "price": "$61.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=FRC8004"
+        },
+        {
+          "brand": "Dorman",
+          "name": "Front brake hose, H66724",
+          "store": "RockAuto",
+          "price": "$9.88",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=H66724",
+          "qty": 2
+        },
+        {
+          "brand": "Dorman",
+          "name": "Rear brake hose, H86433",
+          "store": "RockAuto",
+          "price": "$11.28",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=H86433",
+          "qty": 2
+        },
+        {
+          "brand": "Dorman",
+          "name": "Brake hose lock clips, 4-pack, HW1457",
+          "store": "RockAuto",
+          "price": "$8.92",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=HW1457"
+        },
+        {
+          "brand": "Dorman",
+          "name": "Front parking brake cable, C92527",
+          "store": "RockAuto",
+          "price": "$20.79",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=C92527"
+        },
+        {
+          "brand": "Dorman",
+          "name": "Rear parking brake cable, C92414",
+          "store": "RockAuto",
+          "price": "$41.78",
+          "link": "https://www.rockauto.com/en/partsearch/?partnum=C92414",
+          "qty": 2
+        }
+      ]
+    }
+  ]
+}
