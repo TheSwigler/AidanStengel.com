@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aidan Stengel · IT Specialist</title>
+  <meta name="description" content="Aidan Stengel, IT specialist in Richmond, VA, building business applications with iMIS, Microsoft Power Platform, and Litify.">
+  <style>
+    :root {
+      --bg: #0e1116; --surface: #161b22; --border: #2a313c;
+      --text: #e6edf3; --muted: #8b949e; --accent: #4fb3ff; --accent-2: #7ee787;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #fbfbfc; --surface: #fff; --border: #dde1e6;
+              --text: #1b1f24; --muted: #59636e; --accent: #0969da; --accent-2: #1a7f37; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.65 var(--sans); }
+    main { max-width: 760px; margin: 0 auto; padding: 96px 24px 64px; }
+    .kicker { font-family: var(--mono); color: var(--accent-2); font-size: 14px; margin-bottom: 12px; }
+    h1 { font-size: clamp(2.4rem, 6vw, 3.4rem); line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.02em; }
+    .role { font-size: 1.25rem; color: var(--muted); margin: 0 0 40px; }
+    h2 { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .1em;
+         color: var(--muted); margin: 48px 0 16px; }
+    h2::before { content: "# "; color: var(--accent); }
+    p { margin: 0 0 16px; }
+    ul.what { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    ul.what li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; }
+    ul.what strong { display: block; margin-bottom: 2px; }
+    ul.what span { color: var(--muted); font-size: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .tags li { font-family: var(--mono); font-size: 13px; padding: 4px 10px; border-radius: 999px;
+               border: 1px solid var(--border); color: var(--muted); }
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="kicker">&gt; Richmond, VA</div>
+  <h1>Aidan Stengel</h1>
+  <p class="role">IT Specialist · Business Applications &amp; Project Management</p>
+
+  <h2>Who I am</h2>
+  <p>I'm an IT specialist at the Virginia State Bar, where I started as a summer intern and have spent the last four years owning the business applications the organization runs on. I like taking manual processes and spreadsheets and turning them into tools people actually use.</p>
+
+  <h2>What I do</h2>
+  <ul class="what">
+    <li><strong>Build business apps and automations</strong><span>Org-wide Power Apps and Power Automate solutions, including service desk, event booking, and reimbursements.</span></li>
+    <li><strong>Run membership and finance systems</strong><span>Administer iMIS and rebuilt the organization's annual dues cycle.</span></li>
+    <li><strong>Connect systems together</strong><span>Lead integration work between iMIS and Litify, working with outside consultants.</span></li>
+    <li><strong>Manage projects end to end</strong><span>From requirements through deployment, plus GitHub-based tracking and documentation.</span></li>
+  </ul>
+
+  <h2>Certifications</h2>
+  <ul class="tags">
+    <li>CompTIA A+</li><li>Network+</li><li>Security+</li>
+    <li>Certified iMIS Administrator</li>
+    <li>Power Platform Fundamentals</li><li>Microsoft 365 Fundamentals</li>
+    <li>Google Project Management</li>
+  </ul>
+
+  <footer>© <span id="yr"></span> Aidan Stengel</footer>
+</main>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
