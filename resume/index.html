@@ -16,6 +16,9 @@
       background: var(--ink); color: #fff; border: 2px solid var(--ink); cursor: pointer; text-decoration: none;
     }
     .btn:hover { background: var(--cobalt); border-color: var(--cobalt); }
+    .btn.ghost { background: transparent; color: var(--ink); }
+    .btn.ghost:hover { background: var(--select); color: var(--ink); border-color: var(--ink); }
+    .print-only { display: none; }
     .job { padding: 28px 0; border-bottom: 1px solid var(--grid); display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
     .job:first-child { border-top: 2px solid var(--ink); }
     .job .when { color: var(--soft); font-size: 16px; padding-top: 3px; }
@@ -30,14 +33,26 @@
 
     @media print {
       @page { margin: 0.6in; }
-      body { background: #fff; font-size: 11pt; line-height: 1.45; }
+      body { background: #fff; }
       .topbar, .head-actions, footer, .no-print { display: none !important; }
+      .print-only { display: block; }
       .page-head { padding: 0; }
       .page-head h1 { font-size: 28pt; margin-bottom: 4pt; }
       main { padding: 0; max-width: none; }
-      section { padding-top: 18pt; break-inside: avoid-page; }
-      h2 { font-size: 15pt; margin-bottom: 8pt; }
-      .job, .row { padding: 8pt 0; break-inside: avoid; }
+      body { font-size: 10pt; line-height: 1.4; }
+      section { padding-top: 12pt; }
+      h2 { font-size: 13pt; margin-bottom: 6pt; break-after: avoid; }
+      .job, .row { padding: 5pt 0; break-inside: avoid; }
+      .job { grid-template-columns: 1.1in 1fr; gap: 10pt; }
+      .job li { margin-bottom: 2pt; }
+      .row { grid-template-columns: 2in 1fr; gap: 10pt; }
+      .row h3, .job h3 { font-size: 11pt; }
+      .row p { font-size: 10pt; }
+      .skills { gap: 12pt; grid-template-columns: repeat(3, 1fr); }
+      .row .meta { font-size: 9pt; margin-top: 1pt; }
+      .chips li { font-size: 9pt; }
+      .skills h3 { margin-bottom: 3pt; }
+      .chips { gap: 4pt 6pt; }
       .chips li { border: 1px solid #999; padding: 2pt 8pt; font-size: 10pt; }
       a { color: inherit; text-decoration: none; }
     }
@@ -58,15 +73,17 @@
 <div class="page-head">
   <h1>Aidan Stengel</h1>
   <p>IT Specialist, business applications and project management. Richmond, VA.</p>
+  <p class="print-only">linkedin.com/in/aidan-stengel-221ab1225 &nbsp; aidanstengel.com</p>
   <div class="head-actions">
     <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+    <a class="btn ghost" href="https://www.linkedin.com/in/aidan-stengel-221ab1225/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </div>
 
 <main>
   <section class="prose" aria-labelledby="sum-h">
     <h2 id="sum-h">Summary</h2>
-    <p>IT specialist with four years owning the business applications of a statewide professional regulatory organization. I build and maintain systems in iMIS, Microsoft Power Platform, and Litify, lead integration projects with outside consultants, and turn manual processes into tools staff rely on every day.</p>
+    <p>IT specialist with four years owning the business applications of a statewide professional regulatory organization. I'm the organization's primary iMIS administrator and developer and its Power Platform developer, I run six to seven major projects at a time, and I direct outside consultants on cross-system integrations. I turn manual processes into tools staff rely on every day.</p>
   </section>
 
   <section aria-labelledby="exp-h">
@@ -78,14 +95,16 @@
           <h3>IT Specialist</h3>
           <div class="org">Virginia State Bar, Richmond, VA</div>
           <ul>
-            <li>Own the organization's business applications across iMIS, Microsoft Power Platform, and Litify</li>
-            <li>Built org-wide Power Apps and Power Automate solutions, including the IT service desk, event booking, and staff reimbursements</li>
-            <li>Rebuilt the annual dues and billing cycle in three months; deployed in 2026</li>
-            <li>Lead the replacement of the Lawyer Referral Service platform, coordinating multiple consultants over an 18-month project</li>
-            <li>Client-side lead for the iMIS and Litify obligations integration covering case costs and payees</li>
-            <li>Introduced GitHub project tracking and version control to the department, replacing a shared spreadsheet</li>
-            <li>Wrote the organization's first iMIS documentation and published it as an internal docs site</li>
-            <li>Train and guide new department staff</li>
+            <li>Primary iMIS administrator and developer; took over iMIS development previously handled by a dedicated full-time position</li>
+            <li>Lead six to seven major iMIS projects at once, coordinating stakeholders and reviewing and approving consultant proposals</li>
+            <li>Lead the Litify and iMIS integration: direct the Litify consultant and build the iMIS side of a two-way sync of discipline costs and payment data</li>
+            <li>Lead the Lawyer Referral Service platform replacement, an 18-month project coordinating multiple consultants with more than $200,000 in consultant work</li>
+            <li>Rebuilt the annual dues and billing cycle in three months, resolving long-standing issues; deployed in 2026</li>
+            <li>Built the organization's Power Apps and Power Automate solutions, including the IT service desk, event booking, and staff reimbursements</li>
+            <li>Handle the highest ticket volume in the department: about 1,640 tickets, roughly a third of the department's total</li>
+            <li>Administer and develop in Litify (Salesforce) and support the organization's C# financial application</li>
+            <li>Moved the department from a shared spreadsheet to GitHub project tracking and version control, and wrote the organization's first iMIS documentation</li>
+            <li>Train staff on business applications and mentor the department's newest team member</li>
           </ul>
         </div>
       </div>
@@ -104,19 +123,19 @@
     <div class="rows-list">
       <div class="row">
         <div><h3>Dues cycle rebuild</h3><div class="meta">iMIS</div></div>
-        <p>Rebuilt the organization's main financial process, annual member dues, in three months and took it live in 2026.</p>
+        <p>Rebuilt the organization's main financial process, annual member dues, in three months, fixing many existing issues, and took it live in 2026.</p>
       </div>
       <div class="row">
         <div><h3>Lawyer referral system replacement</h3><div class="meta">Project management, integration</div></div>
-        <p>Leading the replacement of a statewide lawyer referral platform after the old system was retired, coordinating several consultants.</p>
+        <p>Leading the replacement of the Virginia Lawyer Referral Service's system after the old platform was shut down. About 18 months in, coordinating several consultants on more than $200,000 of work.</p>
       </div>
       <div class="row">
         <div><h3>iMIS and Litify obligations sync</h3><div class="meta">Litify, iMIS</div></div>
-        <p>Client-side lead on syncing case costs and payee obligations between the case management system and the membership database.</p>
+        <p>Two-way integration that moves discipline costs and Client Protection Fund data from Litify into iMIS for payment, then syncs payments back. I direct the Litify consultant and build the iMIS side.</p>
       </div>
       <div class="row">
         <div><h3>IT service desk</h3><div class="meta">Power Apps, Azure Static Web Apps, GitHub</div></div>
-        <p>Three iterations: two in Power Platform, and the current version built as a web app, tracked in GitHub and hosted on Azure.</p>
+        <p>The service desk the IT department runs on. Three iterations: two in Power Platform, and the current one custom-coded, managed in GitHub, and hosted on Azure.</p>
       </div>
       <div class="row">
         <div><h3>Courtroom documents app</h3><div class="meta">Android</div></div>
@@ -138,15 +157,15 @@
     <div class="skills">
       <div>
         <h3>Platforms</h3>
-        <ul><li>iMIS</li><li>Microsoft Power Apps and Power Automate</li><li>Litify</li><li>Microsoft 365 and Azure</li></ul>
+        <ul><li>iMIS (administration and development)</li><li>Microsoft Power Apps and Power Automate</li><li>Litify on Salesforce</li><li>Microsoft 365 and Azure</li></ul>
       </div>
       <div>
         <h3>Delivery</h3>
-        <ul><li>Project management</li><li>Requirements gathering</li><li>Vendor and consultant coordination</li><li>Documentation and training</li></ul>
+        <ul><li>Project management</li><li>Business analysis, requirements, and UAT</li><li>Vendor and consultant direction</li><li>Documentation and training</li></ul>
       </div>
       <div>
         <h3>Technical</h3>
-        <ul><li>Systems integration</li><li>GitHub and version control</li><li>Web and Android apps</li><li>Networking and security fundamentals</li></ul>
+        <ul><li>JavaScript (iMIS development)</li><li>C# application support</li><li>Systems integration</li><li>GitHub and version control</li><li>Web and Android apps</li><li>Networking and security fundamentals</li></ul>
       </div>
     </div>
   </section>
