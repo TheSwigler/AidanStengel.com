@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume and portfolio · Aidan Stengel</title>
+  <meta name="description" content="Resume and project portfolio for Aidan Stengel, IT Specialist in Richmond, VA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .head-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 11px 20px; font: 600 16px/1.2 var(--body);
+      background: var(--ink); color: #fff; border: 2px solid var(--ink); cursor: pointer; text-decoration: none;
+    }
+    .btn:hover { background: var(--cobalt); border-color: var(--cobalt); }
+    .job { padding: 28px 0; border-bottom: 1px solid var(--grid); display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
+    .job:first-child { border-top: 2px solid var(--ink); }
+    .job .when { color: var(--soft); font-size: 16px; padding-top: 3px; }
+    .job h3 { font: 600 1.25rem/1.3 var(--display); margin: 0; }
+    .job .org { color: var(--soft); margin: 2px 0 12px; }
+    .job ul { margin: 0; padding-left: 20px; }
+    .job li { margin-bottom: 6px; max-width: 64ch; }
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+    .skills h3 { font: 600 1.05rem/1.3 var(--display); margin: 0 0 10px; }
+    .skills ul { margin: 0; padding-left: 20px; color: var(--soft); }
+    @media (max-width: 700px) { .job { grid-template-columns: 1fr; gap: 4px; } }
+
+    @media print {
+      @page { margin: 0.6in; }
+      body { background: #fff; font-size: 11pt; line-height: 1.45; }
+      .topbar, .head-actions, footer, .no-print { display: none !important; }
+      .page-head { padding: 0; }
+      .page-head h1 { font-size: 28pt; margin-bottom: 4pt; }
+      main { padding: 0; max-width: none; }
+      section { padding-top: 18pt; break-inside: avoid-page; }
+      h2 { font-size: 15pt; margin-bottom: 8pt; }
+      .job, .row { padding: 8pt 0; break-inside: avoid; }
+      .chips li { border: 1px solid #999; padding: 2pt 8pt; font-size: 10pt; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/resume/" aria-current="page">Resume</a>
+      <a href="/gifts/">Wish list</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <h1>Aidan Stengel</h1>
+  <p>IT Specialist, business applications and project management. Richmond, VA.</p>
+  <div class="head-actions">
+    <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+  </div>
+</div>
+
+<main>
+  <section class="prose" aria-labelledby="sum-h">
+    <h2 id="sum-h">Summary</h2>
+    <p>IT specialist with four years owning the business applications of a statewide professional regulatory organization. I build and maintain systems in iMIS, Microsoft Power Platform, and Litify, lead integration projects with outside consultants, and turn manual processes into tools staff rely on every day.</p>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <div>
+      <div class="job">
+        <div class="when">2022 to present</div>
+        <div>
+          <h3>IT Specialist</h3>
+          <div class="org">Virginia State Bar, Richmond, VA</div>
+          <ul>
+            <li>Own the organization's business applications across iMIS, Microsoft Power Platform, and Litify</li>
+            <li>Built org-wide Power Apps and Power Automate solutions, including the IT service desk, event booking, and staff reimbursements</li>
+            <li>Rebuilt the annual dues and billing cycle in three months; deployed in 2026</li>
+            <li>Lead the replacement of the Lawyer Referral Service platform, coordinating multiple consultants over an 18-month project</li>
+            <li>Client-side lead for the iMIS and Litify obligations integration covering case costs and payees</li>
+            <li>Introduced GitHub project tracking and version control to the department, replacing a shared spreadsheet</li>
+            <li>Wrote the organization's first iMIS documentation and published it as an internal docs site</li>
+            <li>Train and guide new department staff</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">Summer</div>
+        <div>
+          <h3>IT Intern</h3>
+          <div class="org">Virginia State Bar, Richmond, VA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="proj-h">
+    <h2 id="proj-h">Selected projects</h2>
+    <div class="rows-list">
+      <div class="row">
+        <div><h3>Dues cycle rebuild</h3><div class="meta">iMIS</div></div>
+        <p>Rebuilt the organization's main financial process, annual member dues, in three months and took it live in 2026.</p>
+      </div>
+      <div class="row">
+        <div><h3>Lawyer referral system replacement</h3><div class="meta">Project management, integration</div></div>
+        <p>Leading the replacement of a statewide lawyer referral platform after the old system was retired, coordinating several consultants.</p>
+      </div>
+      <div class="row">
+        <div><h3>iMIS and Litify obligations sync</h3><div class="meta">Litify, iMIS</div></div>
+        <p>Client-side lead on syncing case costs and payee obligations between the case management system and the membership database.</p>
+      </div>
+      <div class="row">
+        <div><h3>IT service desk</h3><div class="meta">Power Apps, Azure Static Web Apps, GitHub</div></div>
+        <p>Three iterations: two in Power Platform, and the current version built as a web app, tracked in GitHub and hosted on Azure.</p>
+      </div>
+      <div class="row">
+        <div><h3>Courtroom documents app</h3><div class="meta">Android</div></div>
+        <p>Custom published Android app that lets court clerks work with electronic documents in the courtroom.</p>
+      </div>
+      <div class="row">
+        <div><h3>Member communities</h3><div class="meta">iMIS</div></div>
+        <p>Forum-style discussion area for members, built inside iMIS.</p>
+      </div>
+      <div class="row">
+        <div><h3>iMIS documentation site</h3><div class="meta">Azure Static Web Apps, Entra ID</div></div>
+        <p>Staff guides and technical docs published as a sign-in-protected site that deploys automatically from GitHub.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Platforms</h3>
+        <ul><li>iMIS</li><li>Microsoft Power Apps and Power Automate</li><li>Litify</li><li>Microsoft 365 and Azure</li></ul>
+      </div>
+      <div>
+        <h3>Delivery</h3>
+        <ul><li>Project management</li><li>Requirements gathering</li><li>Vendor and consultant coordination</li><li>Documentation and training</li></ul>
+      </div>
+      <div>
+        <h3>Technical</h3>
+        <ul><li>Systems integration</li><li>GitHub and version control</li><li>Web and Android apps</li><li>Networking and security fundamentals</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cert-h">
+    <h2 id="cert-h">Certifications</h2>
+    <ul class="chips">
+      <li>CompTIA A+</li>
+      <li>CompTIA Network+</li>
+      <li>CompTIA Security+</li>
+      <li>Certified iMIS Administrator</li>
+      <li>Microsoft Power Platform Fundamentals</li>
+      <li>Microsoft 365 Fundamentals</li>
+      <li>Google Project Management Certificate</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    <div class="rows-list">
+      <div class="row">
+        <div><h3>Christopher Newport University</h3><div class="meta">2019 to 2022</div></div>
+        <p>Computer Engineering coursework</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="yr"></span> Aidan Stengel</span>
+  <a href="/">Home</a>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
