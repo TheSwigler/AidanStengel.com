@@ -104,7 +104,14 @@
               "store": "Harbor Freight · Richmond · Aisle 7",
               "price": "$54.99",
               "link": "https://www.harborfreight.com/3-ton-heavy-duty-ratcheting-jack-stands-slate-gray-70593.html",
-              "image": "img/61c55352ad.jpg"
+              "image": "img/61c55352ad.jpg",
+              "sale": {
+                "price": "$34.99",
+                "was": "$54.99",
+                "ends": "2026-11-25",
+                "note": "Inside Track Club price",
+                "source": "https://go.harborfreight.com/sku/70593"
+              }
             },
             {
               "brand": "DAYTONA",

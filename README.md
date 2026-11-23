@@ -28,6 +28,14 @@ Everything is in `gifts/items.json`, grouped into `categories`. A category has e
 }
 ```
 
+Optional sale info on an item:
+
+```json
+"sale": { "price": "$34.99", "was": "$54.99", "ends": "2026-11-25", "note": "Inside Track Club price", "source": "https://..." }
+```
+
+The page shows an "On sale" tag and the sale price, with the regular `price` crossed out. A sale disappears on its own after its `ends` date. A top-level `"checked": "YYYY-MM-DD"` shows when prices were last checked. A scheduled task checks prices and sales every Monday morning.
+
 Only `name` and `link` are required. `top` is the item's rank in Top picks (1 shows first). `"have": true` crosses it out as "Already have it". Product photos go in `gifts/img/`; leave `image` out and it shows the brand's initials instead.
 
 ## Resume PDF

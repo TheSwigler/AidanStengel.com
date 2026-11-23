@@ -24,6 +24,11 @@
     .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font: 600 12px/1.6 var(--body); }
     .tag.top { background: var(--select); }
     .tag.have { background: var(--grid); color: var(--soft); }
+    .tag.sale { background: #C2410C; color: #fff; }
+    .was { display: block; font-size: 13px; color: var(--soft); font-weight: 500; text-decoration: line-through; }
+    .sale-note { display: block; font-size: 13px; color: #9A3412; font-weight: 500; margin-top: 2px; }
+    .price.on-sale { color: #9A3412; }
+    .checked { color: var(--soft); font-size: 15px; margin: 8px 0 0; }
     .price { text-align: right; font-weight: 600; white-space: nowrap; }
     .qty { display: block; font-size: 13px; color: var(--soft); font-weight: 500; }
     .item.have a { opacity: .55; }
@@ -92,6 +97,20 @@ function el(tag, cls, text) {
   if (text != null) e.textContent = text;
   return e;
 }
+// A sale shows only until its end date (inclusive, local time).
+function onSale(it) {
+  var s = it.sale;
+  if (!s || !s.price) return null;
+  if (s.ends) {
+    var end = new Date(s.ends + 'T23:59:59');
+    if (isNaN(end) || end < new Date()) return null;
+  }
+  return s;
+}
+function fmtDate(iso) {
+  var d = new Date(iso + 'T12:00:00');
+  return isNaN(d) ? iso : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
 function initials(s) {
   return (s || '?').split(/\s+/).map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
 }
@@ -108,10 +127,21 @@ function itemEl(it) {
   if (it.brand) main.appendChild(el('span', 'brand', it.brand));
   main.appendChild(el('span', 'name', it.name));
   if (it.store) main.appendChild(el('span', 'store', it.store));
+  var sale = onSale(it);
   if (it.have) main.appendChild(el('span', 'tag have', 'Already have it'));
-  else if (it.top) main.appendChild(el('span', 'tag top', 'Top pick'));
+  else {
+    if (sale) main.appendChild(el('span', 'tag sale', 'On sale'));
+    if (it.top) { var t = el('span', 'tag top', 'Top pick'); if (sale) t.style.marginLeft = '6px'; main.appendChild(t); }
+    if (sale) {
+      var bits = [];
+      if (sale.note) bits.push(sale.note);
+      if (sale.ends) bits.push('through ' + fmtDate(sale.ends));
+      if (bits.length) main.appendChild(el('span', 'sale-note', bits.join(', ')));
+    }
+  }
   a.appendChild(main);
-  var p = el('span', 'price', it.price || '');
+  var p = el('span', 'price' + (sale && !it.have ? ' on-sale' : ''), (sale && !it.have) ? sale.price : (it.price || ''));
+  if (sale && !it.have && it.price) p.appendChild(el('span', 'was', it.price));
   if (it.qty > 1) p.appendChild(el('span', 'qty', '×' + it.qty));
   a.appendChild(p);
   li.appendChild(a);
@@ -157,6 +187,7 @@ fetch('items.json', { cache: 'no-store' })
     cats.forEach(function (c) { wrap.appendChild(catEl(c, 'cat')); });
     root.appendChild(wrap);
     if (data.footnote) root.appendChild(el('p', 'foot', data.footnote));
+    if (data.checked) root.appendChild(el('p', 'checked', 'Prices and sales last checked ' + fmtDate(data.checked) + '.'));
   })
   .catch(function () {
     document.getElementById('root').innerHTML = '<p class="foot">The list could not be loaded. Try refreshing the page.</p>';
