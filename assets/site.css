@@ -170,3 +170,26 @@ body {
 .page-head h1::after { content: ""; position: absolute; right: -6px; bottom: -6px; width: 9px; height: 9px; background: var(--cobalt); border: 2px solid #fff; }
 @media (max-width: 700px) { .sheetbar .ref { width: 64px; } .sheetbar { font-size: 12.5px; } }
 @media print { .sheetbar { display: none; } body { background-image: none; } .page-head h1 { outline: none; box-shadow: none; padding: 0; background: none; } .page-head h1::after { display: none; } }
+
+/* ---------- Case studies ---------- */
+.cs-meta { width: 100%; border-collapse: collapse; table-layout: fixed; background: #fff; box-shadow: 0 0 0 1px var(--grid); margin-top: 8px; }
+.cs-meta th { font: 500 13px/1.3 var(--body); color: var(--soft); text-align: left; padding: 9px 12px; background: #E8ECF2; border: 1px solid var(--grid); }
+.cs-meta td { padding: 12px; border: 1px solid var(--grid); font-size: 16px; vertical-align: top; }
+.cs h2 { margin-top: 0; }
+.cs .prose p, .cs .prose li { max-width: 66ch; }
+.cs .prose ul { padding-left: 22px; }
+.versions { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; box-shadow: 0 0 0 1px var(--grid); background: #fff; }
+.versions li { padding: 18px 18px 20px; border: 1px solid var(--grid); }
+.versions b { display: block; font: 800 1.6rem/1 var(--display); color: var(--cobalt); margin-bottom: 6px; }
+.versions h3 { margin: 0 0 6px; font: 600 1.1rem/1.3 var(--display); }
+.versions p { margin: 0; color: var(--soft); font-size: 16px; }
+.versions li.now { box-shadow: inset 0 0 0 3px var(--cobalt); }
+.todo { background: #FFF3C4; box-shadow: inset 0 -2px 0 var(--select); padding: 0 4px; font-style: normal; color: #6B4E00; }
+.cs-next { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--grid); color: var(--soft); }
+@media (max-width: 700px) {
+  .cs-meta, .cs-meta tbody, .cs-meta tr { display: block; }
+  .cs-meta thead { display: none; }
+  .cs-meta td { display: block; border-top: 0; }
+  .cs-meta td::before { content: attr(data-label); display: block; font: 500 12px/1.3 var(--body); color: var(--soft); margin-bottom: 4px; }
+}
+@media print { .todo { background: none; box-shadow: none; } }

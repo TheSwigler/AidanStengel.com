@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building an IT service desk three times · Aidan Stengel</title>
+  <meta name="description" content="How an IT service desk grew from a Power App into a custom web app on Azure, and why each version replaced the last.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aidan Stengel">
+  <meta property="og:title" content="Building an IT service desk three times">
+  <meta property="og:description" content="How an IT service desk grew from a Power App into a custom web app on Azure, and why each version replaced the last.">
+  <meta property="og:url" content="https://aidanstengel.com/work/service-desk/">
+  <meta property="og:image" content="https://aidanstengel.com/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://aidanstengel.com/work/service-desk/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="cs">
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/resume/">Resume<span class="long"> and portfolio</span></a>
+      <a href="/garage/">Garage</a>
+    </nav>
+  </div>
+</header>
+
+<div class="sheetbar" aria-hidden="true"><div class="ref">A1</div><div class="fx">fx</div><div class="expr">=<span class="fn">CASESTUDY</span>("Service desk")</div></div>
+
+<div class="page-head">
+  <h1>Building an IT service desk three times</h1>
+  <p>How the department’s ticketing grew from a Power App into a custom web app, and why each version replaced the last.</p>
+</div>
+
+<main>
+  <section aria-label="Project summary">
+    <table class="cs-meta">
+      <thead><tr><th scope="col">Role</th><th scope="col">Users</th><th scope="col">Stack (v3)</th><th scope="col">Status</th></tr></thead>
+      <tbody><tr>
+        <td data-label="Role">Designer and developer, all three versions</td>
+        <td data-label="Users">5 IT technicians, about 100 staff</td>
+        <td data-label="Stack (v3)">React on Azure Static Web Apps, Microsoft sign-in, Azure SQL, Blob storage</td>
+        <td data-label="Status">v2 in use; v3 built, launching soon</td>
+      </tr></tbody>
+    </table>
+  </section>
+
+  <section class="prose" aria-labelledby="problem-h">
+    <h2 id="problem-h">The problem</h2>
+    <p>The IT department was paying for an outside help desk service <em class="todo">that cost about $12,000 a year</em>. It was expensive for what we used, and it wasn't built around how a small IT team supporting about 100 staff actually works. We wanted something more affordable that fit our needs exactly.</p>
+  </section>
+
+  <section aria-labelledby="versions-h">
+    <h2 id="versions-h">Three versions</h2>
+    <ol class="versions">
+      <li><b>v1</b><h3>Power Apps: the bare minimum</h3><p>A simple Power Platform app to get every request into one place we owned. It was rough, but it proved we didn't need the paid service.</p></li>
+      <li><b>v2</b><h3>Power Apps: one place for everything</h3><p>Brought access requests and equipment rentals into the same system as tickets, so staff had one place to ask IT for anything. This is the version in use today.</p></li>
+      <li class="now"><b>v3</b><h3>React on Azure: built to grow</h3><p>v2 ran into SharePoint's row limits, and Power Apps had become slow. v3 is a React app on Azure Static Web Apps with Microsoft sign-in, an Azure SQL database, and Blob storage for files.</p></li>
+    </ol>
+  </section>
+
+  <section class="prose" aria-labelledby="does-h">
+    <h2 id="does-h">What it does</h2>
+    <ul>
+      <li>Help desk tickets for 5 technicians and about 100 staff</li>
+      <li>Access requests</li>
+      <li>Equipment rentals and inventory management, internal and external</li>
+      <li>Event calendars</li>
+      <li>Email notifications and updates</li>
+    </ul>
+  </section>
+
+  <section class="prose" aria-labelledby="did-h">
+    <h2 id="did-h">What I did</h2>
+    <ul>
+      <li>Designed and built all three versions, from the data model to the screens staff use.</li>
+      <li>Chose to move off SharePoint and Power Apps when they hit their limits, and rebuilt on a stack that can grow: React, Azure SQL, and Blob storage, with the same Microsoft sign-in staff already use.</li>
+      <li>Manage v3 in GitHub, so changes are versioned, reviewed, and deployed automatically.</li>
+    </ul>
+  </section>
+
+  <section class="prose" aria-labelledby="results-h">
+    <h2 id="results-h">Results</h2>
+    <ul>
+      <li>Replaced a paid outside service with a system the department owns.</li>
+      <li>Tickets, access requests, equipment, and events now live in one place instead of several.</li>
+      <li>I've handled about 1,640 tickets myself, roughly a third of the department's total.</li>
+    </ul>
+  </section>
+
+  <section class="prose" aria-labelledby="learned-h">
+    <h2 id="learned-h">What I learned</h2>
+    <p>Low-code tools are the right way to start: they get a working system in front of people fast and prove the idea. Once the requirements settle and the platform starts fighting you, owning the code gives you control over performance, features, and how changes ship.</p>
+  </section>
+  <p class="cs-next">Next: <a href="/work/lawyer-referral/">Replacing a statewide lawyer referral system</a></p>
+</main>
+
+<footer>
+  <span>© <span id="yr"></span> Aidan Stengel</span>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
