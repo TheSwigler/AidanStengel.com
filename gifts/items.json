@@ -69,7 +69,7 @@
               "brand": "Milwaukee",
               "name": "2520-20 M12 FUEL HACKZALL Reciprocating Saw, tool only",
               "store": "Walmart (3rd-party seller)",
-              "price": "$179.00",
+              "price": "$146.00",
               "link": "https://www.walmart.com/ip/Milwaukee-2520-20-M12-FUEL-HACKZALL-Reciprocating-Saw-Tool-Only/153246558"
             },
             {
@@ -96,7 +96,7 @@
               "brand": "Milwaukee",
               "name": "2584-20 M12 FUEL 6 in. Random Orbital Sander, 3/32 in. orbit, tool only",
               "store": "Summit Racing",
-              "price": "$303.09",
+              "price": "$329.99",
               "link": "https://www.summitracing.com/parts/mwt-258420"
             }
           ]
@@ -116,7 +116,7 @@
                 "was": "$54.99",
                 "ends": "2026-11-25",
                 "note": "Inside Track Club price",
-                "source": "https://go.harborfreight.com/cpi/digital/2026/11/inside-track-club-members-get-early-access-to-black-friday-sale-valid-thru-11-25"
+                "source": "https://go.harborfreight.com/sku/70593/"
               }
             },
             {
@@ -131,7 +131,7 @@
                 "was": "$269.99",
                 "ends": "2026-12-03",
                 "note": "Inside Track Club price",
-                "source": "https://www.harborfreight.com/search/?q=56641+or+64241+or+64781+or+64785"
+                "source": "https://www.harborfreight.com/brands/daytona.html"
               }
             }
           ]
@@ -187,8 +187,8 @@
                 "price": "$71.99",
                 "was": "$119.99",
                 "ends": "2026-11-25",
-                "note": "Inside Track Club, 40% off ICON ratchets",
-                "source": "https://go.harborfreight.com/cpi/digital/2026/11/inside-track-club-members-get-early-access-to-black-friday-sale-valid-thru-11-25"
+                "note": "Inside Track Club, 40% off ICON ratchets, in-store",
+                "source": "https://go.harborfreight.com/coupons/2026/11/184910-004/"
               }
             },
             {
@@ -353,7 +353,7 @@
                 "was": "$74.99",
                 "ends": "2026-12-03",
                 "note": "Inside Track Club price",
-                "source": "https://harborfreight.com/hand-tools/pliers.html?brand=ICON"
+                "source": "https://go.harborfreight.com/sku/64597/"
               }
             },
             {
@@ -497,7 +497,14 @@
               "store": "Harbor Freight · Richmond · Aisle 6",
               "price": "$19.99",
               "link": "https://go.harborfreight.com/www70597",
-              "image": "img/e41a00e66f.jpg"
+              "image": "img/e41a00e66f.jpg",
+              "sale": {
+                "price": "$11.99",
+                "was": "$19.99",
+                "ends": "2026-12-03",
+                "note": "Inside Track Club price",
+                "source": "https://go.harborfreight.com/sku/70597/"
+              }
             },
             {
               "brand": "MADDOX",
@@ -545,9 +552,16 @@
               "brand": "U.S. GENERAL",
               "name": "30 in. 5-Drawer Mechanics Cart, Slate Gray",
               "store": "Harbor Freight · North Richmond · Aisle 7",
-              "price": "$289.99",
+              "price": "$279.99",
               "link": "https://www.harborfreight.com/30-in-5-drawer-mechanics-cart-slate-gray-70375.html",
-              "image": "img/f0a2fccf12.jpg"
+              "image": "img/f0a2fccf12.jpg",
+              "sale": {
+                "price": "$209.99",
+                "was": "$279.99",
+                "ends": "2026-11-25",
+                "note": "Inside Track Club 25% off, in-store only",
+                "source": "https://www.harborfreight.com/tool-storage-organization/tool-storage/30-in-5-drawer-mechanics-cart-slate-gray-70375.html"
+              }
             }
           ]
         }
@@ -609,7 +623,7 @@
             "price": "$424.00",
             "was": "$449.00",
             "note": "Sale price",
-            "source": "https://espressooutlet.com/products/turin-df64-gen-2-single-dose-coffee-grinder"
+            "source": "https://espressooutlet.com/products/turin-df64-gen-2-single-dose-coffee-grinder?_pos=1&amp=&_psq=turin+DF64+Gen+2&amp=&_ss=e&amp=&_v=1.0&amp=&variant=40367726297163"
           }
         },
         {
@@ -638,7 +652,7 @@
             "price": "$104.00",
             "was": "$130.00",
             "note": "20% off, Rescue Red color",
-            "source": "https://www.yeti.com/21071503455.html"
+            "source": "https://www.yeti.com/drinkware/mugs/french-press-64oz.html"
           }
         },
         {
@@ -783,7 +797,7 @@
           "brand": "FAIRCHILD",
           "name": "G3009 Door Seal Weatherstrip Kit, 159 in.",
           "store": "RockAuto",
-          "price": "$35.00",
+          "price": "$31.84",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=G3009",
           "qty": 2,
           "image": "img/158f6e8738.jpg"
@@ -936,7 +950,7 @@
           "brand": "Moog",
           "name": "Lower ball joint, K6035",
           "store": "RockAuto",
-          "price": "$47.58",
+          "price": "$49.58",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=K6035",
           "qty": 2
         },
@@ -1006,7 +1020,7 @@
           "brand": "Timken",
           "name": "Front outer wheel bearing + race, SET3",
           "store": "RockAuto",
-          "price": "$19.58",
+          "price": "$19.54",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=SET3",
           "qty": 2
         },
@@ -1014,7 +1028,7 @@
           "brand": "Timken",
           "name": "Front inner wheel bearing + race, SET5",
           "store": "RockAuto",
-          "price": "$20.66",
+          "price": "$20.60",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=SET5",
           "qty": 2
         },
@@ -1022,7 +1036,7 @@
           "brand": "Timken",
           "name": "Front inner grease seal, 9406S",
           "store": "RockAuto",
-          "price": "$19.10",
+          "price": "$18.48",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=9406S",
           "qty": 2
         },
@@ -1074,7 +1088,7 @@
           "brand": "Dynamic Friction",
           "name": "GEO-Kit 5000 rotors + pads, front and rear, 451447184",
           "store": "RockAuto",
-          "price": "$244.79",
+          "price": "$249.79",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=451447184"
         },
         {
@@ -1117,7 +1131,7 @@
           "brand": "Dorman",
           "name": "Rear brake hose, H86433",
           "store": "RockAuto",
-          "price": "$11.28",
+          "price": "$11.30",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=H86433",
           "qty": 2
         },
@@ -1125,7 +1139,7 @@
           "brand": "Dorman",
           "name": "Brake hose lock clips, 4-pack, HW1457",
           "store": "RockAuto",
-          "price": "$8.92",
+          "price": "$8.88",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=HW1457"
         },
         {
@@ -1139,7 +1153,7 @@
           "brand": "Dorman",
           "name": "Rear parking brake cable, C92414",
           "store": "RockAuto",
-          "price": "$41.78",
+          "price": "$32.72",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=C92414",
           "qty": 2
         }
