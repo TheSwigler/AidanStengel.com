@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /gifts/
+Sitemap: https://aidanstengel.com/sitemap.xml
