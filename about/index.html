@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · Aidan Stengel</title>
+  <meta name="description" content="Who Aidan Stengel is beyond the resume: how he got into IT, what he cares about, and what he does outside of work in Richmond, Virginia.">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Aidan Stengel">
+  <meta property="og:title" content="About Aidan Stengel">
+  <meta property="og:description" content="How I got here, what I care about, and what I do outside of work.">
+  <meta property="og:url" content="https://aidanstengel.com/about/">
+  <meta property="og:image" content="https://aidanstengel.com/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://aidanstengel.com/about/">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .about-intro { display: grid; grid-template-columns: 1fr 220px; gap: 40px; align-items: start; }
+    .about-intro img {
+      width: 220px; height: 220px; object-fit: cover; margin-top: 6px;
+      outline: 3px solid var(--cobalt); outline-offset: -1px; box-shadow: 10px 10px 0 var(--select);
+    }
+    .about-intro .lead { font: 400 clamp(1.3rem, 2.4vw, 1.6rem)/1.45 var(--display); margin: 0 0 18px; max-width: 32ch; }
+
+    /* "How I got here" as a small timeline sheet */
+    .path { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 0 0 1px var(--grid); }
+    .path th { text-align: left; font: 500 13px/1.3 var(--body); color: var(--soft); background: #E8ECF2; padding: 9px 12px; border: 1px solid var(--grid); }
+    .path td { padding: 12px; border: 1px solid var(--grid); vertical-align: top; font-size: 16px; }
+    .path td:first-child { width: 150px; font: 500 14px/1.5 var(--mono); color: var(--soft); white-space: nowrap; }
+    .path tr.now td { box-shadow: inset 0 3px 0 -1px var(--cobalt), inset 0 -3px 0 -1px var(--cobalt); }
+    .path tr.now td:first-child { box-shadow: inset 3px 3px 0 -1px var(--cobalt), inset 0 -3px 0 -1px var(--cobalt); color: var(--cobalt); }
+    .path tr.now td:last-child { box-shadow: inset -3px 3px 0 -1px var(--cobalt), inset 0 -3px 0 -1px var(--cobalt); }
+
+    /* Outside of work: a few cells, one per interest */
+    .life { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; background: #fff; box-shadow: 0 0 0 1px var(--grid); }
+    .life > div { padding: 20px 20px 22px; border: 1px solid var(--grid); }
+    .life h3 { margin: 0 0 8px; font: 600 1.15rem/1.3 var(--display); display: flex; align-items: center; gap: 10px; }
+    .life h3::before { content: ""; width: 10px; height: 10px; background: var(--select); flex: none; }
+    .life p { margin: 0; color: var(--soft); font-size: 16px; }
+
+    @media (max-width: 760px) {
+      .about-intro { grid-template-columns: 1fr; }
+      .about-intro img { width: 150px; height: 150px; order: -1; }
+      .path td:first-child { width: auto; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="home" href="/">Aidan Stengel</a>
+    <nav aria-label="Site">
+      <a href="/about/" aria-current="page">About</a>
+      <a href="/resume/">Resume<span class="long"> and portfolio</span></a>
+      <a href="/garage/">Garage</a>
+    </nav>
+  </div>
+</header>
+
+<div class="sheetbar" aria-hidden="true"><div class="ref">A1</div><div class="fx">fx</div><div class="expr">=<span class="fn">ABOUT</span>("Aidan")</div></div>
+
+<div class="page-head">
+  <h1>About me</h1>
+</div>
+
+<main>
+  <section class="about-intro" aria-label="Introduction">
+    <div class="prose">
+      <p class="lead">I'm Aidan. I live in Richmond, Virginia, and I like figuring out how things work, then making them work better.</p>
+      <p>At my day job that means software, data, and projects. At home it usually means a car with its wheels off. The two have more in common than you'd think: both reward patience, good notes, and not skipping steps.</p>
+    </div>
+    <img src="/assets/img/headshot.jpg" alt="Aidan Stengel" width="220" height="220">
+  </section>
+
+  <section aria-labelledby="path-h">
+    <h2 id="path-h">How I got here</h2>
+    <table class="path">
+      <thead><tr><th scope="col">When</th><th scope="col">What happened</th></tr></thead>
+      <tbody>
+        <tr><td>2019</td><td>Started studying computer engineering at Christopher Newport University in Newport News.</td></tr>
+        <tr><td>2020 to 2022</td><td>Became a Resident Assistant, and later a Student Ambassador giving campus tours. Both taught me more about people than any class did.</td></tr>
+        <tr><td>Summer 2022</td><td>Took a summer IT job at the Virginia State Bar, helping with a workstation refresh and the help desk.</td></tr>
+        <tr class="now"><td>Oct 2022 to now</td><td>That summer job turned into my career. I've spent the years since building and running the systems the Bar depends on. The details are on my <a href="/resume/">resume</a>.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="prose" aria-labelledby="care-h">
+    <h2 id="care-h">What I care about</h2>
+    <p><strong>Leaving things better documented than I found them.</strong> The best system in the world is a liability if only one person understands it. I wrote my organization's first iMIS documentation for that reason.</p>
+    <p><strong>Building for the people who use it.</strong> Most of my projects start with sitting next to someone and watching how they actually do their job, before deciding what to build.</p>
+    <p><strong>Doing it myself when I can.</strong> Whether it's a help desk system or a steering box, I'd rather understand it well enough to build or fix it than pay someone to.</p>
+  </section>
+
+  <section aria-labelledby="life-h">
+    <h2 id="life-h">Outside of work</h2>
+    <div class="life">
+      <div>
+        <h3>Cars</h3>
+        <p>I do my own car work, from wiring to suspension. Right now that's a 1981 Corvette I'm bringing back to life, with a <a href="/garage/">build log</a> here on the site. My daily driver is a '95 GMC K1500.</p>
+      </div>
+      <div>
+        <h3>EMT</h3>
+        <p>I'm a certified Emergency Medical Technician. It's a different kind of problem-solving: calm, methodical, and focused on the person in front of you.</p>
+      </div>
+      <div>
+        <h3>Richmond</h3>
+        <p>I live in Richmond, and it's home. It's a great city for someone who likes old cars, good food, and having a garage to work in.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="yr"></span> Aidan Stengel</span>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="/assets/cmdbar.js" defer></script>
+</body>
+</html>
