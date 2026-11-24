@@ -82,7 +82,7 @@
       position: absolute; width: var(--cell-w); height: var(--cell-h);
       display: flex; align-items: center; justify-content: flex-end; padding-right: 10px;
       font: 500 11.5px/1 var(--mono); font-style: normal; font-variant-numeric: tabular-nums;
-      transition: background-color 1.4s ease, color 1.4s ease;
+      transition: background-color 4s ease, color 4s ease;
     }
     .grid-area > .selected, .grid-area > .lede, .grid-area > .where { position: relative; z-index: 2; }
     .rows { z-index: 1; }
@@ -178,7 +178,7 @@
 
 <script>
 /* Live heatmap: every cell is colored by a value, like Excel's color scales.
-   Values drift slowly, and heat builds up around the cursor. */
+   Values shift very slowly; there is no cursor effect. */
 (function () {
   var area = document.querySelector('.grid-area'), layer = document.getElementById('heat');
   if (!area || !layer) return;
@@ -208,7 +208,7 @@
       var el = document.createElement('i');
       el.style.left = (off + c * cw) + 'px'; el.style.top = (r * ch) + 'px';
       layer.appendChild(el);
-      cells.push({ el: el, c: c, r: r, x: off + c * cw + cw / 2, y: r * ch + ch / 2, label: Math.random() < 0.34 });
+      cells.push({ el: el, c: c, r: r, x: off + c * cw + cw / 2, y: r * ch + ch / 2, label: Math.random() < 0.18 });
     }
     paint();
   }
@@ -234,13 +234,7 @@
   var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 200); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
   if (reduce) return;
-  setInterval(function () { if (!document.hidden) { t += 0.22; paint(); } }, 1400);
-  var pending = false;
-  area.addEventListener('pointermove', function (e) {
-    var a = area.getBoundingClientRect(); mx = e.clientX - a.left; my = e.clientY - a.top;
-    if (!pending) { pending = true; requestAnimationFrame(function () { pending = false; paint(); }); }
-  });
-  area.addEventListener('pointerleave', function () { mx = my = -1e4; paint(); });
+  setInterval(function () { if (!document.hidden) { t += 0.07; paint(); } }, 6000);
 })();
 </script>
 </body>
