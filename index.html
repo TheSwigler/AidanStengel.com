@@ -75,6 +75,9 @@
     .topbar.wide .in { max-width: none; padding-left: calc(44px + var(--cell-w)); padding-right: 24px; }
     @media (max-width: 700px) { .topbar.wide .in { padding-left: 54px; padding-right: 20px; } }
     @media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
+
+    /* Depth without motion: a soft lift under the name box (grain is site-wide in site.css) */
+    .selected { box-shadow: 10px 10px 0 var(--select), 0 24px 48px -12px rgba(20,33,61,.35) !important; }
   </style>
 </head>
 <body>
