@@ -1,7 +1,7 @@
 {
   "title": "Aidan's Gift List",
   "occasion": "Christmas 2026",
-  "footnote": "Prices were checked in late October 2026 and may have changed.",
+  "footnote": "Prices checked November 24, 2026. Prices change, so check the store before buying.",
   "categories": [
     {
       "name": "Tools",
@@ -77,7 +77,13 @@
               "name": "2836-20 M18 FUEL Oscillating Multi-Tool, tool only",
               "store": "Ace Hardware",
               "price": "$249.00",
-              "link": "https://www.acehardware.com/departments/tools/power-tools/oscillating-tools/2009028"
+              "link": "https://www.acehardware.com/departments/tools/power-tools/oscillating-tools/2009028",
+              "sale": {
+                "price": "$234.00",
+                "was": "$249.00",
+                "note": "Sale; $199 for Ace Rewards members",
+                "source": "https://www.acehardware.com/departments/tools/power-tools/oscillating-tools/2009028"
+              }
             },
             {
               "brand": "Milwaukee",
@@ -110,7 +116,7 @@
                 "was": "$54.99",
                 "ends": "2026-11-25",
                 "note": "Inside Track Club price",
-                "source": "https://go.harborfreight.com/sku/70593"
+                "source": "https://go.harborfreight.com/cpi/digital/2026/11/inside-track-club-members-get-early-access-to-black-friday-sale-valid-thru-11-25"
               }
             },
             {
@@ -119,7 +125,14 @@
               "store": "Harbor Freight · Richmond · Aisle 7",
               "price": "$269.99",
               "link": "https://www.harborfreight.com/3-ton-long-reach-low-profile-professional-floor-jack-with-rapid-pump-black-64781.html",
-              "image": "img/8f3922a2ce.jpg"
+              "image": "img/8f3922a2ce.jpg",
+              "sale": {
+                "price": "$179.99",
+                "was": "$269.99",
+                "ends": "2026-12-03",
+                "note": "Inside Track Club price",
+                "source": "https://www.harborfreight.com/search/?q=56641+or+64241+or+64781+or+64785"
+              }
             }
           ]
         },
@@ -157,7 +170,7 @@
               "brand": "ICON",
               "name": "3/8 in. Drive Professional Impact Socket Extension Set, 4-Piece",
               "store": "Harbor Freight · Limited stock · Richmond · Aisle 4",
-              "price": "$69.98",
+              "price": "$34.99",
               "link": "https://go.harborfreight.com/www56918",
               "top": 7,
               "image": "img/1a01b38f58.jpg"
@@ -169,7 +182,14 @@
               "price": "$119.99",
               "link": "https://www.harborfreight.com/g2-12-in-drive-26-in-long-locking-flex-ratchet-with-comfort-grip-70437.html",
               "top": 8,
-              "image": "img/1e9b203d4a.jpg"
+              "image": "img/1e9b203d4a.jpg",
+              "sale": {
+                "price": "$71.99",
+                "was": "$119.99",
+                "ends": "2026-11-25",
+                "note": "Inside Track Club, 40% off ICON ratchets",
+                "source": "https://go.harborfreight.com/cpi/digital/2026/11/inside-track-club-members-get-early-access-to-black-friday-sale-valid-thru-11-25"
+              }
             },
             {
               "brand": "ICON",
@@ -268,7 +288,7 @@
               "brand": "ICON",
               "name": "7 in. Diagonal Cutter",
               "store": "Harbor Freight · Richmond · Aisle 4",
-              "price": "$17.99",
+              "price": "$21.99",
               "link": "https://go.harborfreight.com/www59168",
               "top": 9,
               "image": "img/4800048606.jpg"
@@ -285,7 +305,7 @@
               "brand": "ICON",
               "name": "11 in. 45° Long-Reach Pliers",
               "store": "Harbor Freight · Richmond · Aisle 4",
-              "price": "$22.99",
+              "price": "$21.99",
               "link": "https://www.harborfreight.com/11-in-45-long-reach-pliers-57790.html",
               "image": "img/f4a05edc67.jpg"
             },
@@ -317,7 +337,7 @@
               "brand": "ICON",
               "name": "8 in. Hose Grip Pliers",
               "store": "Harbor Freight · Richmond · Aisle 4",
-              "price": "$19.99",
+              "price": "$21.99",
               "link": "https://www.harborfreight.com/8-in-hose-grip-pliers-57795.html",
               "image": "img/fac435bff0.jpg"
             },
@@ -327,7 +347,14 @@
               "store": "Harbor Freight · Richmond · Aisle 4",
               "price": "$74.99",
               "link": "https://go.harborfreight.com/www64597",
-              "image": "img/d1e4266da8.jpg"
+              "image": "img/d1e4266da8.jpg",
+              "sale": {
+                "price": "$59.99",
+                "was": "$74.99",
+                "ends": "2026-12-03",
+                "note": "Inside Track Club price",
+                "source": "https://harborfreight.com/hand-tools/pliers.html?brand=ICON"
+              }
             },
             {
               "brand": "ICON",
@@ -349,7 +376,7 @@
               "brand": "ICON",
               "name": "11 in. Long-Reach Needle Nose Pliers",
               "store": "Harbor Freight · Richmond · Aisle 4",
-              "price": "$22.99",
+              "price": "$21.99",
               "link": "https://go.harborfreight.com/www57801",
               "image": "img/8233a53607.jpg"
             }
@@ -452,7 +479,7 @@
               "brand": "MERLIN",
               "name": "Dual-Head Air Chuck Inflator with Dial Gauge",
               "store": "Harbor Freight · Richmond · Aisle 5",
-              "price": "$11.99",
+              "price": "$14.99",
               "link": "https://www.harborfreight.com/Dual-Head-Air-Chuck-Inflator-with-Dial-Gauge-63544.html",
               "image": "img/f07e1d0132.jpg"
             },
@@ -577,7 +604,13 @@
           "store": "Espresso Outlet",
           "price": "$449.00",
           "link": "https://espressooutlet.com/products/turin-df64-gen-2-single-dose-coffee-grinder",
-          "image": "img/811087bf34.jpg"
+          "image": "img/811087bf34.jpg",
+          "sale": {
+            "price": "$424.00",
+            "was": "$449.00",
+            "note": "Sale price",
+            "source": "https://espressooutlet.com/products/turin-df64-gen-2-single-dose-coffee-grinder"
+          }
         },
         {
           "brand": "Turin",
@@ -600,7 +633,13 @@
           "name": "Rambler 64 oz. French Press",
           "store": "YETI",
           "price": "$130.00",
-          "link": "https://www.yeti.com/21071503455.html"
+          "link": "https://www.yeti.com/21071503455.html",
+          "sale": {
+            "price": "$104.00",
+            "was": "$130.00",
+            "note": "20% off, Rescue Red color",
+            "source": "https://www.yeti.com/21071503455.html"
+          }
         },
         {
           "brand": "CafeSing",
@@ -703,7 +742,7 @@
           "brand": "DORMAN",
           "name": "88538 Inside Door Handle, Gray w/ Chrome Lever, Front Right",
           "store": "RockAuto",
-          "price": "$19.46",
+          "price": "$19.31",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=88538",
           "image": "img/c41816a64e.jpg"
         },
@@ -711,7 +750,7 @@
           "brand": "DORMAN",
           "name": "88539 Inside Door Handle, Gray w/ Chrome Lever, Front Left",
           "store": "RockAuto",
-          "price": "$19.97",
+          "price": "$19.11",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=88539",
           "image": "img/cbc40ae266.jpg"
         },
@@ -735,7 +774,7 @@
           "brand": "SKP",
           "name": "SK38428 Door Lock Striker",
           "store": "RockAuto",
-          "price": "$9.12",
+          "price": "$8.62",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=SK38428",
           "qty": 2,
           "image": "img/e21314653d.jpg"
@@ -761,7 +800,7 @@
           "brand": "PRECISION",
           "name": "DWP111192 Upper Door Weatherstrip, Left & Right",
           "store": "RockAuto",
-          "price": "$27.79",
+          "price": "$27.89",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=DWP111192",
           "image": "img/9d825a53fd.jpg"
         },
@@ -769,7 +808,7 @@
           "brand": "STANDARD MOTOR PRODUCTS",
           "name": "DL179 Door Lock Cylinder Set with Keys, Chrome",
           "store": "RockAuto",
-          "price": "$38.79",
+          "price": "$37.89",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=DL179",
           "image": "img/357786c71b.jpg"
         },
@@ -777,7 +816,7 @@
           "brand": "SKP",
           "name": "SK940103 Door Latch, Front Right",
           "store": "RockAuto",
-          "price": "$36.79",
+          "price": "$35.99",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=SK940103",
           "image": "img/24a12bc837.jpg"
         },
@@ -785,7 +824,7 @@
           "brand": "SKP",
           "name": "SK940102 Door Latch, Front Left",
           "store": "RockAuto",
-          "price": "$36.99",
+          "price": "$35.89",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=SK940102",
           "image": "img/f92b066272.jpg"
         },
@@ -793,7 +832,7 @@
           "brand": "DORMAN",
           "name": "703239 Door Lock Rod Clip Assortment",
           "store": "RockAuto",
-          "price": "$4.34",
+          "price": "$4.26",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=703239",
           "qty": 2,
           "image": "img/249f385bf1.jpg"
@@ -818,7 +857,7 @@
           "brand": "WAI GLOBAL",
           "name": "361240 Inside Door Handle Trim, Front Right, Gray",
           "store": "RockAuto",
-          "price": "$11.20",
+          "price": "$11.21",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=361240",
           "image": "img/ac78a1990f.jpg"
         },
@@ -841,7 +880,7 @@
           "brand": "Borgeson",
           "name": "Power steering conversion kit, 999032 (Zip SC-849)",
           "store": "Zip Corvette",
-          "price": "$838.30",
+          "price": "$911.95",
           "link": "https://www.zip-corvette.com/67-82-borgeson-power-steering-gear-box-conversion.html"
         },
         {
@@ -862,8 +901,14 @@
           "brand": "Addco",
           "name": "1-1/4 in. front anti-sway bar kit (Zip SU-652)",
           "store": "Zip Corvette",
-          "price": "$286.90",
-          "link": "https://www.zip-corvette.com/63-82-addco-1-1-4in-front-anti-sway-bar-kit.html"
+          "price": "$289.80",
+          "link": "https://www.zip-corvette.com/63-82-addco-1-1-4in-front-anti-sway-bar-kit.html",
+          "sale": {
+            "price": "$260.82",
+            "was": "$289.80",
+            "note": "10% off with code ZIPTBC",
+            "source": "https://www.zip-corvette.com/63-82-addco-1-1-4in-front-anti-sway-bar-kit.html"
+          }
         },
         {
           "brand": "Zip",
@@ -871,7 +916,13 @@
           "store": "Zip Corvette",
           "price": "$167.30",
           "link": "https://www.zip-corvette.com/63-82-upper-control-arm-shaft-kit-offset-design.html",
-          "qty": 2
+          "qty": 2,
+          "sale": {
+            "price": "$150.58",
+            "was": "$167.30",
+            "note": "10% off with code ZIPTBC",
+            "source": "https://www.zip-corvette.com/63-82-upper-control-arm-shaft-kit-offset-design.html"
+          }
         },
         {
           "brand": "Moog",
@@ -893,7 +944,7 @@
           "brand": "Moog",
           "name": "Tie rod end, left-hand thread, ES323L",
           "store": "RockAuto",
-          "price": "$30.18",
+          "price": "$30.24",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=ES323L",
           "qty": 2
         },
@@ -901,7 +952,7 @@
           "brand": "Moog",
           "name": "Tie rod end, right-hand thread, ES323R",
           "store": "RockAuto",
-          "price": "$30.14",
+          "price": "$30.28",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=ES323R",
           "qty": 2
         },
@@ -1001,7 +1052,7 @@
           "brand": "Eckler's",
           "name": "Trailing arm pivot bolt set, 25-114507-1",
           "store": "Eckler's",
-          "price": "$20.99",
+          "price": "$23.99",
           "link": "https://ecklers.com/1963-1982-corvette-trailing-arm-pivot-bolt-kit-25-114507-1.html"
         },
         {
@@ -1058,7 +1109,7 @@
           "brand": "Dorman",
           "name": "Front brake hose, H66724",
           "store": "RockAuto",
-          "price": "$9.88",
+          "price": "$10.36",
           "link": "https://www.rockauto.com/en/partsearch/?partnum=H66724",
           "qty": 2
         },
@@ -1094,5 +1145,6 @@
         }
       ]
     }
-  ]
+  ],
+  "checked": "2026-11-24"
 }
