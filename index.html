@@ -67,19 +67,10 @@
       .lede { font-size: 1.15rem; }
       .formula .expr { font-size: 13px; }
     }
-    /* Headshot sits in a block of cells to the right of the name: 2 columns by 6 rows */
-    .hero-photo-cell {
-      position: absolute; z-index: 2;
-      left: calc(44px + var(--cell-w) * 8); top: calc(var(--cell-h) * 2);
-      width: calc(var(--cell-w) * 2); height: calc(var(--cell-h) * 6); object-fit: cover; object-position: 50% 30%;
-      outline: 3px solid var(--cobalt); outline-offset: -1px; box-shadow: 10px 10px 0 var(--select);
-    }
-    @media (max-width: 1180px) { .hero-photo-cell { display: none; } }
-    .about-photo { display: none; }
-    @media (max-width: 1180px) {
-      .about-photo { display: block; float: right; width: 140px; height: 140px; object-fit: cover; margin: 0 0 12px 20px;
-                     outline: 3px solid var(--cobalt); outline-offset: -1px; box-shadow: 6px 6px 0 var(--select); }
-    }
+    .about { max-width: calc(62ch + 220px); }
+    .about-photo { float: right; width: 180px; height: 180px; object-fit: cover; margin: 6px 0 16px 28px;
+                   outline: 3px solid var(--cobalt); outline-offset: -1px; box-shadow: 8px 8px 0 var(--select); }
+    @media (max-width: 700px) { .about-photo { width: 130px; height: 130px; margin: 4px 0 12px 18px; box-shadow: 6px 6px 0 var(--select); } }
     /* Line the top bar up with the name cell in the sheet below */
     .topbar.wide .in { max-width: none; padding-left: calc(44px + var(--cell-w)); padding-right: 24px; }
     @media (max-width: 700px) { .topbar.wide .in { padding-left: 54px; padding-right: 20px; } }
@@ -111,7 +102,6 @@
     <div class="rows" aria-hidden="true">
       <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
     </div>
-    <img class="hero-photo-cell" src="/assets/img/headshot.jpg" alt="Aidan Stengel" width="224" height="216">
     <div class="selected"><h1>Aidan Stengel</h1></div>
     <p class="lede">I build things. At work it's the apps and systems people rely on every day; at home it's usually something with an engine.</p>
     <p class="where">Richmond, Virginia</p>
@@ -119,9 +109,9 @@
 </header>
 
 <main>
-  <section class="prose" aria-labelledby="about-h">
+  <section class="prose about" aria-labelledby="about-h">
     <h2 id="about-h">About me</h2>
-    <img class="about-photo" src="/assets/img/headshot.jpg" alt="" width="140" height="140" loading="lazy">
+    <img class="about-photo" src="/assets/img/headshot.jpg" alt="Aidan Stengel" width="180" height="180" loading="lazy">
     <p>I'm Aidan. I work in IT, where I spend most of my time building software, automating processes, and connecting systems so people can stop doing things by hand. I like taking something messy and making it simple.</p>
     <p>Outside of work I'm usually in the garage. I do my own car work, from wiring to suspension, and right now I'm building a 1981 Corvette. I keep a <a href="/garage/">build log</a> of it here.</p>
     <p>If you're here for the professional side, my <a href="/resume/">resume and portfolio</a> has the details.</p>
