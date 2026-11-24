@@ -105,6 +105,11 @@
     .glance td { font: 800 clamp(1.8rem, 4vw, 2.6rem)/1 var(--display); letter-spacing: -0.02em; padding: 16px 12px; border: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
     .glance td { cursor: cell; position: relative; }
     .glance td.sel { box-shadow: inset 0 0 0 3px var(--cobalt); }
+    .glance td.flash { animation: cellflash 420ms cubic-bezier(.22,1,.36,1); }
+    @keyframes cellflash { 0% { background: #FFE88A; } 100% { background: #fff; } }
+    .glance-bar .g-expr { transition: opacity 120ms ease-out, filter 120ms ease-out; }
+    .glance-bar .g-expr.swap { opacity: 0; filter: blur(2px); }
+    @media (prefers-reduced-motion: reduce) { .glance td.flash { animation: none; } .glance-bar .g-expr { transition: none; } }
     .glance td.sel::after { content: ""; position: absolute; right: -4px; bottom: -4px; width: 7px; height: 7px; background: var(--cobalt); border: 1px solid #fff; z-index: 1; }
     .glance td:focus-visible { outline: none; }
     .glance td:hover:not(.sel) { background: #FFF8DD; }
@@ -270,8 +275,14 @@
   }
   function select(td) {
     cells.forEach(function (c) { c.classList.remove('sel'); c.removeAttribute('aria-selected'); });
+    var changed = !td.classList.contains('sel');
     td.classList.add('sel'); td.setAttribute('aria-selected', 'true');
-    out.innerHTML = color(td.getAttribute('data-f')); ref.textContent = td.getAttribute('data-ref');
+    ref.textContent = td.getAttribute('data-ref');
+    if (!changed && out.innerHTML) return;
+    // crossfade the formula text, and flash the cell to confirm the selection
+    td.classList.remove('flash'); void td.offsetWidth; if (out.innerHTML) td.classList.add('flash');
+    out.classList.add('swap');
+    setTimeout(function () { out.innerHTML = color(td.getAttribute('data-f')); out.classList.remove('swap'); }, out.innerHTML ? 120 : 0);
   }
   cells.forEach(function (td, i) {
     td.addEventListener('click', function () { select(td); });

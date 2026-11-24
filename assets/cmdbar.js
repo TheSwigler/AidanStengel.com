@@ -77,7 +77,7 @@
     list.innerHTML = '';
     items.forEach(function (c, i) {
       var li = document.createElement('li');
-      li.setAttribute('role', 'option'); li.id = 'cmd-opt-' + i;
+      li.setAttribute('role', 'option'); li.id = 'cmd-opt-' + i; li.style.setProperty('--i', i);
       li.innerHTML = '<code></code><span></span>';
       li.firstChild.textContent = c.f; li.lastChild.textContent = c.d;
       li.addEventListener('mousedown', function (e) { e.preventDefault(); pick(c); });
@@ -90,7 +90,7 @@
     [].forEach.call(list.children, function (li, j) { li.classList.toggle('on', j === i); });
     if (i >= 0) input.setAttribute('aria-activedescendant', 'cmd-opt-' + i); else input.removeAttribute('aria-activedescendant');
   }
-  function say(text, kind) { msg.textContent = text; msg.className = 'cmd-msg ' + (kind || ''); }
+  function say(text, kind) { msg.textContent = text; msg.className = 'cmd-msg'; void msg.offsetWidth; msg.className = 'cmd-msg ' + (kind || ''); }
   function pick(c) { if (c.help) { input.value = '='; render(''); input.focus(); return; } input.value = c.f; run(); }
   function run() {
     var r = resolve(input.value);
@@ -134,7 +134,9 @@
   function close() {
     if (!open) return;
     open = false; window.__cmdBarActive = false;
-    var pop = bar.querySelector('.cmd-pop'); if (pop) pop.remove();
+    var pop = bar.querySelector('.cmd-pop');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (pop) { if (reduce) pop.remove(); else { pop.classList.add('closing'); setTimeout(function () { pop.remove(); }, 140); } }
     bar.classList.remove('cmd-open');
     expr.innerHTML = saved;
   }

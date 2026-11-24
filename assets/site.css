@@ -253,3 +253,28 @@ body {
 .diagram .l { font: 500 12.5px var(--mono); fill: #2546F0; }
 .diagram .a { stroke: #14213D; stroke-width: 1.6; }
 .diagram figcaption { margin-top: 8px; }
+
+/* ---------- Interaction motion: only in response to a click, tap, or keypress ---------- */
+:root { --ease-out: cubic-bezier(.22, 1, .36, 1); --ease-in: cubic-bezier(.55, 0, 1, .45); }
+
+/* Command bar dropdown: grows out of the bar (enter 180ms, exit ~20% shorter) */
+.cmd-pop { transform-origin: 0 0; animation: pop-in 180ms var(--ease-out) both; }
+.cmd-pop.closing { animation: pop-out 140ms var(--ease-in) both; }
+@keyframes pop-in { from { opacity: 0; transform: scale(.95) translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes pop-out { from { opacity: 1; transform: none; } to { opacity: 0; transform: scale(.95) translateY(-4px); } }
+/* rows settle in one after another, 30ms apart */
+.cmd-list li { animation: row-in 200ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 30ms); }
+@keyframes row-in { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+/* success pulse */
+.cmd-msg.ok, .cmd-msg.err { animation: pulse 420ms var(--ease-out); }
+@keyframes pulse { 0% { background: #FFE88A; } 100% { background: transparent; } }
+
+/* Press feedback: scale to 0.97 while held */
+.btn, .backlink, .work-item, .cmd-list li { transition-property: transform, box-shadow, background-color; transition-duration: 160ms; transition-timing-function: var(--ease-out); }
+.btn:active, .backlink:active { transform: scale(.97) !important; box-shadow: none !important; transition-duration: 80ms; }
+.work-item:active { transform: scale(.985) !important; transition-duration: 80ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmd-pop, .cmd-pop.closing, .cmd-list li, .cmd-msg.ok, .cmd-msg.err { animation: none !important; }
+  .btn:active, .backlink:active, .work-item:active { transform: none !important; }
+}
