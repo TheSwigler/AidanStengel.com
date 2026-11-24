@@ -19,6 +19,10 @@
     .btn.ghost { background: transparent; color: var(--ink); }
     .btn.ghost:hover { background: var(--select); color: var(--ink); border-color: var(--ink); }
     .print-only { display: none; }
+    .page-head.has-photo { position: relative; }
+    .headshot { float: right; width: 180px; height: 180px; object-fit: cover; margin: 0 0 16px 24px;
+                outline: 3px solid var(--cobalt); outline-offset: -1px; box-shadow: 8px 8px 0 var(--select); }
+    @media (max-width: 700px) { .headshot { float: none; display: block; width: 128px; height: 128px; margin: 0 0 20px; } }
     .job { padding: 28px 0; border-bottom: 1px solid var(--grid); display: grid; grid-template-columns: 180px 1fr; gap: 24px; }
     .job:first-child { border-top: 2px solid var(--ink); }
     .job .when { color: var(--soft); font-size: 16px; padding-top: 3px; }
@@ -32,19 +36,23 @@
     @media (max-width: 700px) { .job { grid-template-columns: 1fr; gap: 4px; } }
 
     @media print {
-      @page { margin: 0.6in; }
+      @page { margin: 0.5in; }
       body { background: #fff; }
-      .topbar, .head-actions, footer, .no-print { display: none !important; }
+      .topbar, .head-actions, footer, .no-print, .headshot { display: none !important; }
       .print-only { display: block; }
       .page-head { padding: 0; }
       .page-head h1 { font-size: 28pt; margin-bottom: 4pt; }
       main { padding: 0; max-width: none; }
-      body { font-size: 10pt; line-height: 1.4; }
-      section { padding-top: 12pt; }
+      body { font-size: 9.5pt; line-height: 1.32; }
+      section { padding-top: 9pt; }
+      .page-head p { font-size: 10pt; }
       h2 { font-size: 13pt; margin-bottom: 6pt; break-after: avoid; }
-      .job, .row { padding: 5pt 0; break-inside: avoid; }
+      .job, .row { padding: 4pt 0; break-inside: avoid; }
       .job { grid-template-columns: 1.1in 1fr; gap: 10pt; }
-      .job li { margin-bottom: 2pt; }
+      .job li { margin-bottom: 1pt; }
+      .job .org { margin: 0 0 3pt; }
+      .page-head h1 { font-size: 24pt; }
+      .chips li { padding: 1pt 6pt; }
       .row { grid-template-columns: 2in 1fr; gap: 10pt; }
       .row h3, .job h3 { font-size: 11pt; }
       .row p { font-size: 10pt; }
@@ -70,7 +78,8 @@
   </div>
 </header>
 
-<div class="page-head">
+<div class="page-head has-photo">
+  <img class="headshot" src="/assets/img/headshot.jpg" alt="Aidan Stengel" width="180" height="180">
   <h1>Aidan Stengel</h1>
   <p>IT Specialist, business applications and project management. Richmond, VA.</p>
   <p class="print-only">linkedin.com/in/aidan-stengel-221ab1225 &nbsp; aidanstengel.com</p>
@@ -90,7 +99,7 @@
     <h2 id="exp-h">Experience</h2>
     <div>
       <div class="job">
-        <div class="when">2022 to present</div>
+        <div class="when">Oct 2022 to present</div>
         <div>
           <h3>IT Specialist</h3>
           <div class="org">Virginia State Bar, Richmond, VA</div>
@@ -109,10 +118,26 @@
         </div>
       </div>
       <div class="job">
-        <div class="when">Summer</div>
+        <div class="when">May to Aug 2022</div>
         <div>
-          <h3>IT Intern</h3>
+          <h3>IT Specialist (summer)</h3>
           <div class="org">Virginia State Bar, Richmond, VA</div>
+          <ul>
+            <li>Documented and deployed new computers for a staff-wide workstation refresh</li>
+            <li>Set up a new IT inventory management system and wrote a phased upgrade plan for all employees</li>
+            <li>Provided help desk and ticketing support across departments</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2020 to 2022</div>
+        <div>
+          <h3>Resident Assistant and Student Ambassador</h3>
+          <div class="org">Christopher Newport University, Newport News, VA</div>
+          <ul>
+            <li>Resident Assistant, Aug 2020 to Aug 2022</li>
+            <li>Student Ambassador, Aug 2021 to Sep 2022: gave campus tours and hosted information sessions for prospective students</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -144,6 +169,10 @@
       <div class="row">
         <div><h3>Member communities</h3><div class="meta">iMIS</div></div>
         <p>Forum-style discussion area for members, built inside iMIS.</p>
+      </div>
+      <div class="row">
+        <div><h3>Malpractice Avoidance Hotline volunteers</h3><div class="meta">iMIS</div></div>
+        <p>The volunteer submission and hours-tracking process for the Bar's malpractice avoidance hotline.</p>
       </div>
       <div class="row">
         <div><h3>iMIS documentation site</h3><div class="meta">Azure Static Web Apps, Entra ID</div></div>
@@ -180,6 +209,7 @@
       <li>Microsoft Power Platform Fundamentals</li>
       <li>Microsoft 365 Fundamentals</li>
       <li>Google Project Management Certificate</li>
+      <li>Emergency Medical Technician, Basic</li>
     </ul>
   </section>
 
@@ -187,7 +217,7 @@
     <h2 id="edu-h">Education</h2>
     <div class="rows-list">
       <div class="row">
-        <div><h3>Christopher Newport University</h3><div class="meta">2019 to 2022</div></div>
+        <div><h3>Christopher Newport University</h3><div class="meta">Aug 2019 to Sep 2022</div></div>
         <p>Computer Engineering coursework</p>
       </div>
     </div>
