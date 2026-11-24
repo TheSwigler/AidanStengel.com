@@ -100,7 +100,18 @@
     .glance { width: 100%; border-collapse: collapse; table-layout: fixed; background: #fff; box-shadow: 0 0 0 1px var(--grid); }
     .glance th { font: 500 13px/1.3 var(--body); color: var(--soft); text-align: left; padding: 10px 12px; background: #E8ECF2; border: 1px solid var(--grid); }
     .glance td { font: 800 clamp(1.8rem, 4vw, 2.6rem)/1 var(--display); letter-spacing: -0.02em; padding: 16px 12px; border: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
-    .glance td:first-child { box-shadow: inset 0 0 0 3px var(--cobalt); }
+    .glance td { cursor: cell; position: relative; }
+    .glance td.sel { box-shadow: inset 0 0 0 3px var(--cobalt); }
+    .glance td.sel::after { content: ""; position: absolute; right: -4px; bottom: -4px; width: 7px; height: 7px; background: var(--cobalt); border: 1px solid #fff; z-index: 1; }
+    .glance td:focus-visible { outline: none; }
+    .glance td:hover:not(.sel) { background: #FFF8DD; }
+    .glance-bar { display: flex; height: 34px; background: #fff; box-shadow: 0 0 0 1px var(--grid); margin-bottom: 1px; font: 500 14px/34px var(--mono); }
+    .glance-bar .g-ref { width: 64px; flex: none; text-align: center; color: var(--soft); border-right: 1px solid var(--grid); }
+    .glance-bar .g-fx { padding: 0 12px; color: var(--soft); font-style: italic; border-right: 1px solid var(--grid); }
+    .glance-bar .g-expr { padding: 0 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+    .glance-bar .g-expr .fn { color: var(--cobalt); }
+    .glance-bar .g-expr .str { color: #1a7f37; }
+    .glance-note { color: var(--soft); font-size: 14px; margin-top: 10px; }
 
     /* Selected work */
     .work-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -162,10 +173,17 @@
 <main>
   <section aria-labelledby="glance-h">
     <h2 id="glance-h">At a glance</h2>
+    <div class="glance-bar" aria-live="polite"><span class="g-ref">A2</span><span class="g-fx">fx</span><span class="g-expr" id="g-expr"></span></div>
     <table class="glance">
       <thead><tr><th scope="col">Years running business apps</th><th scope="col">Tickets handled</th><th scope="col">Major projects at once</th><th scope="col">Certifications</th></tr></thead>
-      <tbody><tr><td data-label="Years running business apps">4+</td><td data-label="Tickets handled">~1,640</td><td data-label="Major projects at once">6–7</td><td data-label="Certifications">8</td></tr></tbody>
+      <tbody><tr>
+        <td tabindex="0" data-ref="A2" data-f='=DATEDIF(DATE(2022,10,1), TODAY(), "y")' data-label="Years running business apps">4+</td>
+        <td tabindex="0" data-ref="B2" data-f='=COUNTIFS(Tickets[Assignee], "Aidan")' data-label="Tickets handled">~1,640</td>
+        <td tabindex="0" data-ref="C2" data-f='=COUNTIFS(Projects[Lead], "Aidan", Projects[Status], "Active")' data-label="Major projects at once">6–7</td>
+        <td tabindex="0" data-ref="D2" data-f='=COUNTA(Certifications[Name])' data-label="Certifications">8</td>
+      </tr></tbody>
     </table>
+    <p class="glance-note">Click a number to see its formula.</p>
   </section>
 
   <section aria-labelledby="work-h">
@@ -220,11 +238,16 @@
     var words = ['apps', 'engines'];
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // the caret sits where the word is being typed, inside the quotes
-    function show(w) { el.innerHTML = head + w + '<span class="caret"></span>' + tail; }
+    function show(w) {
+      if (window.__cmdBarActive) return;           // someone is typing in the bar
+      var t = document.getElementById('typed'); if (!t) return;
+      t.innerHTML = head + w + '<span class="caret"></span>' + tail;
+    }
     if (reduce) { show(words[0]); return; }
     var wi = 0, n = 0, dir = 1;
     show('');
     setTimeout(function tick() {
+      if (window.__cmdBarActive) return setTimeout(tick, 400);
       var w = words[wi];
       n += dir; show(w.slice(0, n));
       if (dir === 1 && n >= w.length) { dir = -1; return setTimeout(tick, 2200); }
@@ -233,5 +256,31 @@
     }, 600);
   })();
 </script>
+<script>
+/* At a glance: clicking a cell shows its formula, like Excel's formula bar */
+(function () {
+  var cells = document.querySelectorAll('.glance td[data-f]'), out = document.getElementById('g-expr'), ref = document.querySelector('.g-ref');
+  if (!cells.length || !out) return;
+  function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function color(f) {
+    return esc(f).replace(/("[^"]*")/g, '<span class="str">$1</span>').replace(/\b([A-Z]{3,})(?=\()/g, '<span class="fn">$1</span>');
+  }
+  function select(td) {
+    cells.forEach(function (c) { c.classList.remove('sel'); c.removeAttribute('aria-selected'); });
+    td.classList.add('sel'); td.setAttribute('aria-selected', 'true');
+    out.innerHTML = color(td.getAttribute('data-f')); ref.textContent = td.getAttribute('data-ref');
+  }
+  cells.forEach(function (td, i) {
+    td.addEventListener('click', function () { select(td); });
+    td.addEventListener('focus', function () { select(td); });
+    td.addEventListener('keydown', function (e) {
+      var n = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : -1;
+      if (n >= 0 && n < cells.length) { e.preventDefault(); cells[n].focus(); }
+    });
+  });
+  select(cells[0]);
+})();
+</script>
+<script src="/assets/cmdbar.js" defer></script>
 </body>
 </html>

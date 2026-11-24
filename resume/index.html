@@ -41,15 +41,15 @@
     @media (max-width: 700px) { .job { grid-template-columns: 1fr; gap: 4px; } }
 
     @media print {
-      @page { margin: 0.5in; }
+      @page { margin: 0.45in 0.5in; }
       body { background: #fff; }
       .topbar, .head-actions, footer, .no-print, .headshot { display: none !important; }
       .print-only { display: block; }
       .page-head { padding: 0; }
       .page-head h1 { font-size: 28pt; margin-bottom: 4pt; }
       main { padding: 0; max-width: none; }
-      body { font-size: 9.2pt; line-height: 1.3; }
-      section { padding-top: 9pt; }
+      body { font-size: 9pt; line-height: 1.28; }
+      section { padding-top: 7pt; }
       .page-head p { font-size: 10pt; }
       h2 { font-size: 13pt; margin-bottom: 6pt; break-after: avoid; }
       .job, .row { padding: 4pt 0; break-inside: avoid; }
@@ -92,7 +92,7 @@
   <p>Data analyst, developer, and project manager. IT Specialist at the Virginia State Bar in Richmond, VA.</p>
   <p class="print-only">linkedin.com/in/aidan-stengel-221ab1225 &nbsp; aidanstengel.com</p>
   <div class="head-actions">
-    <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+    <a class="btn" href="/resume.pdf" download="Aidan-Stengel-Resume.pdf">Download PDF</a>
     <a class="btn ghost" href="https://www.linkedin.com/in/aidan-stengel-221ab1225/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </div>
@@ -236,5 +236,6 @@
   <span>© <span id="yr"></span> Aidan Stengel</span>
 </footer>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="/assets/cmdbar.js" defer></script>
 </body>
 </html>
