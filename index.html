@@ -22,7 +22,7 @@
     .formula .fx { padding: 0 14px; display: grid; place-items: center; border-right: 1px solid var(--grid); color: var(--soft); font-style: italic; }
     .formula .expr { padding: 14px 16px; white-space: nowrap; overflow: hidden; }
     .formula .expr .fn { color: var(--cobalt); }
-    .caret { display: inline-block; width: 2px; height: 1.05em; background: var(--ink); vertical-align: -2px; margin-left: 1px; animation: blink 1s steps(1) infinite; }
+    .caret { display: inline-block; width: 2px; height: 1.05em; background: var(--ink); vertical-align: -2px; margin: 0 1px; animation: blink 1s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
 
     .cols, .rows { font: 400 12px/1 var(--mono); color: var(--soft); user-select: none; }
@@ -93,7 +93,7 @@
   <div class="formula" aria-hidden="true">
     <div class="ref">B3</div>
     <div class="fx">fx</div>
-    <div class="expr"><span id="typed"></span><span class="caret"></span></div>
+    <div class="expr"><span id="typed"></span></div>
   </div>
   <div class="cols" aria-hidden="true">
     <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span>
@@ -136,7 +136,8 @@
     var head = '=<span class="fn">BUILD</span>("', tail = '")';
     var words = ['apps', 'engines'];
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function show(w) { el.innerHTML = head + w + tail; }
+    // the caret sits where the word is being typed, inside the quotes
+    function show(w) { el.innerHTML = head + w + '<span class="caret"></span>' + tail; }
     if (reduce) { show(words[0]); return; }
     var wi = 0, n = 0, dir = 1;
     show('');
