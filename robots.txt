@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aidanstengel.com/sitemap.xml

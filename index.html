@@ -3,8 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aidan Stengel, IT Specialist in Richmond, VA</title>
-  <meta name="description" content="Aidan Stengel turns spreadsheets and manual processes into apps people actually use. IT specialist working in iMIS, Microsoft Power Platform, and Litify.">
+  <title>Aidan Stengel, data analyst, developer, and project manager</title>
+  <meta name="description" content="Aidan Stengel is a data analyst, developer, and project manager in Richmond, Virginia. I turn messy processes and data into systems people actually use, and I run the projects that get them built.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aidan Stengel">
+  <meta property="og:title" content="Aidan Stengel, data analyst, developer, and project manager">
+  <meta property="og:description" content="I turn messy processes and data into systems people actually use, and I run the projects that get them built.">
+  <meta property="og:url" content="https://aidanstengel.com/">
+  <meta property="og:image" content="https://aidanstengel.com/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://aidanstengel.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -57,7 +66,14 @@
       font: 800 clamp(2.6rem, 8vw, 6rem)/1 var(--display);
       font-variation-settings: "opsz" 96; letter-spacing: -0.035em; margin: 0;
     }
-    .lede, .where { padding-left: 10px; }   /* text sits inside its cells, like a spreadsheet */
+    .lede, .where { padding-left: 10px; }
+    /* role labels sit in cells, two columns each */
+    .roles { position: relative; z-index: 2; display: flex; flex-wrap: wrap; margin-top: var(--cell-h); }
+    .roles span {
+      width: calc(var(--cell-w) * 2); height: var(--cell-h); display: flex; align-items: center; padding-left: 10px;
+      background: #fff; box-shadow: inset 0 0 0 1px var(--grid); font: 600 15px/1 var(--body); color: var(--ink);
+    }
+    .roles span::before { content: ""; width: 8px; height: 8px; background: var(--select); margin-right: 10px; flex: none; }   /* text sits inside its cells, like a spreadsheet */
     .lede { max-width: 34ch; margin: var(--cell-h) 0 0; font: 400 1.5rem/var(--cell-h) var(--display); }
     .where { margin: var(--cell-h) 0 0; color: var(--soft); font-size: 17px; line-height: var(--cell-h); }
 
@@ -78,6 +94,37 @@
 
     /* Depth without motion: a soft lift under the name box (grain is site-wide in site.css) */
     .selected { box-shadow: 10px 10px 0 var(--select), 0 24px 48px -12px rgba(20,33,61,.35) !important; }
+
+    .sheet { background: var(--paper); position: relative; }
+    /* At a glance: a small spreadsheet table */
+    .glance { width: 100%; border-collapse: collapse; table-layout: fixed; background: #fff; box-shadow: 0 0 0 1px var(--grid); }
+    .glance th { font: 500 13px/1.3 var(--body); color: var(--soft); text-align: left; padding: 10px 12px; background: #E8ECF2; border: 1px solid var(--grid); }
+    .glance td { font: 800 clamp(1.8rem, 4vw, 2.6rem)/1 var(--display); letter-spacing: -0.02em; padding: 16px 12px; border: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+    .glance td:first-child { box-shadow: inset 0 0 0 3px var(--cobalt); }
+
+    /* Selected work */
+    .work-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .work-item {
+      display: flex; flex-direction: column; gap: 8px; padding: 22px 22px 20px; background: #fff; color: var(--ink);
+      text-decoration: none; box-shadow: 0 0 0 1px var(--grid); transition: box-shadow .15s, transform .15s;
+    }
+    .work-item:hover, .work-item:focus-visible { box-shadow: 0 0 0 3px var(--cobalt), 8px 8px 0 var(--select); transform: translate(-2px, -2px); }
+    .wk-meta { font: 500 13px/1.4 var(--mono); color: var(--soft); }
+    .wk-title { font: 600 1.35rem/1.2 var(--display); letter-spacing: -0.01em; }
+    .wk-sum { color: var(--soft); font-size: 16px; }
+    .wk-go { margin-top: 6px; color: var(--cobalt); font-weight: 600; font-size: 15px; }
+    .more { color: var(--soft); margin-top: 20px; }
+
+    .contact p { color: var(--soft); margin: 0 0 18px; }
+    .btn { display: inline-block; padding: 12px 22px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; transition: transform .15s, box-shadow .15s; }
+    .btn:hover, .btn:focus-visible { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--select); }
+    @media (max-width: 700px) {
+      .glance, .glance thead, .glance tbody, .glance tr { display: block; }
+      .glance thead { display: none; }
+      .glance tr { display: grid; grid-template-columns: 1fr 1fr; }
+      .glance td { font-size: 1.8rem; }
+      .glance td::after { content: attr(data-label); display: block; font: 500 12px/1.3 var(--body); color: var(--soft); margin-top: 6px; letter-spacing: 0; }
+    }
   </style>
 </head>
 <body>
@@ -106,18 +153,51 @@
       <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
     </div>
     <div class="selected"><h1>Aidan Stengel</h1></div>
-    <p class="lede">I build things. At work it's the apps and systems people rely on every day; at home it's usually something with an engine.</p>
+    <div class="roles"><span>Data analyst</span><span>Developer</span><span>Project manager</span></div>
+    <p class="lede">I turn messy processes and data into systems people actually use, and I run the projects that get them built.</p>
     <p class="where">Richmond, Virginia</p>
   </div>
 </header>
 
 <main>
+  <section aria-labelledby="glance-h">
+    <h2 id="glance-h">At a glance</h2>
+    <table class="glance">
+      <thead><tr><th scope="col">Years running business apps</th><th scope="col">Tickets handled</th><th scope="col">Major projects at once</th><th scope="col">Certifications</th></tr></thead>
+      <tbody><tr><td data-label="Years running business apps">4+</td><td data-label="Tickets handled">~1,640</td><td data-label="Major projects at once">6–7</td><td data-label="Certifications">8</td></tr></tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">Selected work</h2>
+    <div class="work-list">
+      <a class="work-item" href="/work/service-desk/">
+        <span class="wk-meta">Power Apps → React on Azure · 3 versions</span>
+        <span class="wk-title">Building an IT service desk three times</span>
+        <span class="wk-sum">Replacing a paid help desk service with one the department owns, from a bare-minimum Power App to React on Azure.</span>
+        <span class="wk-go">Read the case study</span>
+      </a>
+      <a class="work-item" href="/work/lawyer-referral/">
+        <span class="wk-meta">Project lead · iMIS · live</span>
+        <span class="wk-title">Replacing a statewide lawyer referral system</span>
+        <span class="wk-sum">Replacing the system behind about 10,000 lawyer referrals a year, after the vendor announced it was shutting down.</span>
+        <span class="wk-go">Read the case study</span>
+      </a>
+    </div>
+    <p class="more">More projects, experience, and certifications are on my <a href="/resume/">resume and portfolio</a>.</p>
+  </section>
+
   <section class="prose about" aria-labelledby="about-h">
     <h2 id="about-h">About me</h2>
     <img class="about-photo" src="/assets/img/headshot.jpg" alt="Aidan Stengel" width="180" height="180" loading="lazy">
-    <p>I'm Aidan. I work in IT, where I spend most of my time building software, automating processes, and connecting systems so people can stop doing things by hand. I like taking something messy and making it simple.</p>
+    <p>I'm Aidan. I work where data, software, and projects meet: I figure out how an organization actually runs, build the apps and automations that make it run better, and keep the work moving from requirements to launch. I like taking something messy and making it simple, and leaving it better documented than I found it.</p>
     <p>Outside of work I'm usually in the garage. I do my own car work, from wiring to suspension, and right now I'm building a 1981 Corvette. I keep a <a href="/garage/">build log</a> of it here.</p>
-    <p>If you're here for the professional side, my <a href="/resume/">resume and portfolio</a> has the details.</p>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Get in touch</h2>
+    <p>The best way to reach me is on LinkedIn.</p>
+    <a class="btn" href="https://www.linkedin.com/in/aidan-stengel-221ab1225/" target="_blank" rel="noopener">Message me on LinkedIn</a>
   </section>
 </main>
 
