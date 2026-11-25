@@ -8,6 +8,7 @@
 
   var CMDS = [
     { f: '=HOME()', d: 'Home page', go: '/' },
+    { f: '=ABOUT()', d: 'About me: my story and life outside work', go: '/about/' },
     { f: '=RESUME()', d: 'Resume and portfolio', go: '/resume/' },
     { f: '=PDF()', d: 'Download my resume as a PDF', go: '/resume.pdf' },
     { f: '=CASESTUDY("service desk")', d: 'Building an IT service desk three times', go: '/work/service-desk/' },
@@ -19,7 +20,7 @@
   ];
   // extra spellings that also work, but aren't listed
   var ALIASES = {
-    'ABOUT': '/#about-h', 'WORK': '/#work-h', 'CONTACT': '/#contact-h', 'CORVETTE': '/garage/corvette/',
+    'WORK': '/#work-h', 'CONTACT': '/#contact-h', 'CORVETTE': '/garage/corvette/',
     'VETTE': '/garage/corvette/', 'CV': '/resume/', 'PORTFOLIO': '/resume/'
   };
 
